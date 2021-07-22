@@ -2,20 +2,22 @@ const express = require('express');
 
 const app = express();
 
+app.set('view engine' , 'ejs');
+
 app.listen(3000);
 
 app.get('/',(req,res) =>{
-   res.sendFile('./view/first.html',{root:__dirname});
+   res.render('first' , {title: 'Home'});
 })
 
 app.get('/about',(req,res) =>{
-    res.sendFile('./view/about.html',{root:__dirname});
+    res.render('about', {title: 'about'});
  })
 
- app.get('./about-me',(req,res) =>{
-     res.redirect('./about');
+ app.get('/blogs/create',(req,res) =>{
+     res.render('create', {title: 'create a new blog'});
  })
 
  app.use((req,res) =>{
-     res.status(404).sendFile('./view/404.html' , {root : __dirname});
+    res.status(404).render('404', {title: '404'});
  })
