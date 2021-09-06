@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<%- include('partial/head.ejs') %>
+<body background="11.jfif">
+    <div class='login' ; style='width:300px ; height:400px'>
+        <form action="/login" method="post">
+            <p style="margin-left:100px">Email:</p>
+            <input style="margin-left:25px ; width:250px" type='text' name='email'>
+            <p style="margin-left:100px">Password:</p>
+            <input style="margin-left:25px; width:250px" style='display:block' type='password' name='password'>
+            <hr/>
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <button class="submit" ; type='submit'>login</button>
+            <% if(errormessage){ %>
+                <p class="keyword"><%= errormessage %></p>
+            <% } %>
+        </form>
+        <hr>
+        <button class="submit"><a style='text-decoration:none ; color:black'  href='/signup'>建立新帳號</a></button>
+    </div>
+    
+</body>
+</html>

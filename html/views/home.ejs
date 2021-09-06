@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partial/head.ejs') %>
+<body background="11.jfif">
+    <ul style="position:absolute ; right:0px ; top:0px ; display:inline">
+        <% if(login==true){ %>
+            <li style=" display:inline"><a href="/logout">logout</a></li>
+        <% }else{ %>
+            <li style=" display:inline"><a href="/login">login</a></li>
+            <li style=" display:inline"><a href="/signup">signup</a></li>
+        <% } %>
+    </ul>
+    <div style="float:left ; margin-left:150px">
+        <h3>你想要搜尋哪一個明星的資料?</h3>
+        <form action="/home" method="post">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <span>請輸入:</span>
+            <input type="text" name="name" placeholder="請輸入明星名稱">
+            <button type="submit">Submit</button>
+        </form>
+        <ol>
+            <li>李一桐</li>
+            <img style="position:relative ; left:100px; top:-10px" ; src="7.jpg" width="250">
+            <li>趙露思</li>
+            <img style="position:relative ; left:100px; top:-10px" ; src="4.jpg" width="250">
+        </ol>
+    </div>
+    <div style="position:absolute ; left:700px ; top:10px ; width:700px ; height:800px">
+        <h4>搜尋紀錄:</h4>
+        <% if(title.length >0){ %>
+            <% title.forEach(blog =>{ %>
+                <h4 style="margin-left:30px">  <%= blog.name %></h4>
+            <% }) %>
+        <% } else { %>
+            <h4 style="margin-left:30px">There is no result to display...</h4>
+        <% } %>
+    </div>
+</body>
+</html>

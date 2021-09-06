@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<%- include('partial/head.ejs') %>
+<body background="11.jfif">
+    <div class='login' ; style='width:300px ; height:400px'>
+        <form  action="/signup" method="post">
+            <p style="margin-left:100px">Email:</p>
+            <input style="margin-left:25px ; width:250px" type='text' name='email'>
+            <p style="margin-left:100px">Password:</p>
+            <input style="margin-left:25px; width:250px" style='display:block' type='text' name='password'>
+            <p style="margin-left:100px">ConfirmPassword:</p>
+            <input style="margin-left:25px; width:250px" style='display:block' type='text' name='ConfirmPassword'>
+            <hr/>
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <button class='submit'; type='submit'>signup</button>
+            <% if(signuperror){ %>
+                <p class="keyword"><%= signuperror %></p>
+            <% } %>
+        </form>
+    </div>
+    
+</body>
+</html>
