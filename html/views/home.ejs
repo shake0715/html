@@ -2,14 +2,6 @@
 <html>
     <%- include('partial/head.ejs') %>
 <body background="11.jfif">
-    <ul style="position:absolute ; right:0px ; top:0px ; display:inline">
-        <% if(login==true){ %>
-            <li style=" display:inline"><a href="/logout">logout</a></li>
-        <% }else{ %>
-            <li style=" display:inline"><a href="/login">login</a></li>
-            <li style=" display:inline"><a href="/signup">signup</a></li>
-        <% } %>
-    </ul>
     <div style="float:left ; margin-left:150px">
         <h3>你想要搜尋哪一個明星的資料?</h3>
         <form action="/home" method="post">
@@ -26,6 +18,14 @@
         </ol>
     </div>
     <div style="position:absolute ; left:700px ; top:10px ; width:700px ; height:800px">
+        <ul style="position:absolute ; right:0px ; top:0px ; display:inline">
+            <% if(login==true){ %>
+                <li style=" display:inline"><a href="/logout">logout</a></li>
+            <% }else{ %>
+                <li style=" display:inline"><a href="/login">login</a></li>
+                <li style=" display:inline"><a href="/signup">signup</a></li>
+            <% } %>
+        </ul>
         <h4>搜尋紀錄:</h4>
         <% if(title.length >0){ %>
             <% title.forEach(blog =>{ %>

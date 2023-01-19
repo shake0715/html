@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>首頁</title>
+    <style type="text/css">
+      .bg .navbar-nav .nav-link{
+        color:white
+      }
+      .bg .title {
+        color:white
+      }
+      .bg{
+          background-color: rgba(0, 0, 255, 0.836);
+      }
+      .time{
+          color:blue;
+      }
+      .back{
+          background-color: rgba(128, 128, 128, 0.281);
+      }
+      .inside{
+        background-color: white;
+      }
+      .dropdown-menu{
+        width: 414px;
+      }
+      .dropdown-menu ul li{
+        border:0px;
+      }
+      .list-group{
+        border-radius: 0px;
+      }
+      .block{
+        background-color:rgb(8, 8, 85);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <a class="navbar-brand title" href="/home">
+            <img src="../warrior.jfif" width="60" height="48" class="d-inline-block align-text-center d-none d-lg-inline-block">
+            Warriors
+          </a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active fw-bold" href='/game' aria-current="page">賽程</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fw-bold" href='/day' aria-current="page">聯盟重要日</a>
+            </li>
+            <li class="nav-item d-lg-none">
+              <a class="nav-link fw-bold" href='/team' aria-current="page"> 球隊</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                焦點球星
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href='/name/curry'>Stephen curry</a></li>
+                <li><a class="dropdown-item" href='/name/klay'>Klay thompson</a></li>
+                <li><a class="dropdown-item" href='/name/green'>Draymond green</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown d-none d-lg-block">
+              <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              球隊
+              </a>
+              <ul class="dropdown-menu p-0 text-center">
+                <li class="list-group-item bg" style='border:0px ; border-radius: 0px ;color:white'>東區</li>
+                <ul class="list-group list-group-horizontal">
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>東南組</li>
+                      <li class="list-group-item">亞特蘭大 老鷹</li>
+                      <li class="list-group-item">夏洛特 黄蜂</li>
+                      <li class="list-group-item">邁阿密 熱火</li>
+                      <li class="list-group-item">奧蘭多 魔術</li>
+                      <li class="list-group-item">華盛頓 巫師</li>
+                    </ul>   
+                  </ul>  
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>大西洋組</li>
+                      <li class="list-group-item">波士頓 塞爾蒂克</li>
+                      <li class="list-group-item">布魯克林 籃網</li>
+                      <li class="list-group-item">紐約 尼克</li>
+                      <li class="list-group-item">費城 76人</li>
+                      <li class="list-group-item">多倫多 暴龍</li>
+                    </ul>   
+                  </ul>
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>中央組</li>
+                      <li class="list-group-item">芝加哥 公牛</li>
+                      <li class="list-group-item">克里夫蘭 騎士</li>
+                      <li class="list-group-item">底特律 活塞</li>
+                      <li class="list-group-item">印第安納 溜馬</li>
+                      <li class="list-group-item">密爾瓦基 公鹿</li>
+                    </ul>   
+                  </ul>           
+                </ul>
+                <li class="list-group-item bg" style='border:0px ; border-radius: 0px ;color:white'>西區</li>
+                <ul class="list-group list-group-horizontal">
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>西南組</li>
+                      <li class="list-group-item">達拉斯 獨行俠</li>
+                      <li class="list-group-item">休士頓 火箭</li>
+                      <li class="list-group-item">曼菲斯 灰熊</li>
+                      <li class="list-group-item">紐奧良 鵜鶘</li>
+                      <li class="list-group-item">聖安東尼奧 馬刺</li>
+                    </ul>   
+                  </ul>  
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>西北組</li>
+                      <li class="list-group-item">丹佛 金塊</li>
+                      <li class="list-group-item">明尼蘇達 灰狼</li>
+                      <li class="list-group-item">奧克拉荷馬城 雷霆</li>
+                      <li class="list-group-item">波特蘭 拓荒者</li>
+                      <li class="list-group-item">猶他 爵士</li>
+                    </ul>   
+                  </ul>
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>太平洋組</li>
+                      <li class="list-group-item">金州 勇士</li>
+                      <li class="list-group-item">洛杉磯 快艇</li>
+                      <li class="list-group-item">洛杉磯 湖人</li>
+                      <li class="list-group-item">鳳凰城 太陽</li>
+                      <li class="list-group-item">沙加緬度 國王</li>
+                    </ul>   
+                  </ul>           
+                </ul>
+              </ul>   
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class='container-fluid back'>
+        <div class='container inside'>
+            <div class='row align-items-center'>
+                <div class='col-12 col-xl-8'>
+                    <h4 class='time mt-5'>NBA 2021-22賽季 重要日程表</h4><hr/>
+                    <h5>以下均為美國時間</h5><br/>
+                    <h5 class='time'>2021年9月11日</h5><br/>
+                    <h5>2021籃球名人堂入堂儀式</h5><br/>
+                    <h5 class='time'>2021年9月28日</h5><br/>
+                    <h5>訓練營開始</h5><br/>
+                    <h5 class='time'>2021年10月19日</h5><br/>
+                    <h5 class='fw-bold'>例行賽開始</h5><br/>
+                    <h5 class='time'>2022年2月18日至20日</h5><br/>
+                    <h5>全明星賽週末（克里夫蘭）</h5><br/>
+                    <h5 class='time'>2022年4月10日</h5><br/>
+                    <h5 class='fw-bold'>例行賽結束</h5><br/>
+                    <h5 class='time'>2022年4月12日至15日</h5><br/>
+                    <h5>季後賽附加賽</h5><br/>
+                    <h5 class='time'>2022年4月16日</h5><br/>
+                    <h5 class='fw-bold'>NBA季後賽開始</h5><br/>
+                    <h5 class='time'>2022年6月2日</h5><br/>
+                    <h5>NBA總冠軍賽開始</h5><br/>
+                    <h5 class='time'>2022年6月19日</h5><br/>
+                    <h5>NBA總冠軍賽第7戰（如有需要）</h5><br/>
+                    <h5 class='time'>2022年6月23日</h5><br/>
+                    <h5 class='fw-bold'>NBA選秀會</h5><br/>
+                    <div class='d-sm-none'>
+                        <img src='../day1.jpg' class='w-100'>
+                        <h5 class='mt-5 time'>精采好球:</h5><hr/>
+                        <iframe class='mt-1 w-100' src="https://www.youtube.com/embed/lz29FUCJWWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class='mt-1 w-100' src="https://www.youtube.com/embed/0OAUE7-ZRKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class='mt-1 w-100' src="https://www.youtube.com/embed/Urj74n-N1uQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h5 class='mt-5 time'>熱門文章:</h5><hr/>
+                        <ul>
+                            <li><a href='https://nba.udn.com/nba/story/6780/5772242'>鹽湖城電視台記者鬧烏龍 訪問克拉克森片段遭瘋傳</a></li>
+                            <li><a href='https://nba.udn.com/nba/story/6780/5777247'>8400萬美元純屬議價 施羅德稱湖人從未端出合約</a></li>
+                            <li><a href='https://nba.udn.com/nba/story/6780/5770536'>勇士簽下布萊德利補強後場 舊將貝爾也獲回歸機會</a></li>
+                            <li><a href='https://nba.udn.com/nba/story/6780/5782749'>同梯4人獲頂薪續約 狀元艾頓坦言仍在等待</a></li>
+                            <li><a href='https://nba.udn.com/nba/story/6780/5773899'>杜蘭特也列ESPN榜單首位 唐西奇排名超車柯瑞</a></li>
+
+                        </ul>
+                    </div>
+                    <div class='d-none d-sm-block d-md-none'>
+                        <img src='../day1.jpg' class='w-100'>
+                        <h5 class='mt-5 time'>精采好球:</h5><hr/>
+                        <iframe class='mt-1 w-100' height='300' src="https://www.youtube.com/embed/lz29FUCJWWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class='mt-1 w-100' height='300' src="https://www.youtube.com/embed/0OAUE7-ZRKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class='mt-1 w-100' height='300' src="https://www.youtube.com/embed/Urj74n-N1uQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h5 class='mt-5 time'>熱門文章:</h5><hr/>
+                        <ul>
+                            <li><a href='https://nba.udn.com/nba/story/6780/5772242'><p class="fs-5">鹽湖城電視台記者鬧烏龍 訪問克拉克森片段遭瘋傳</p></a></li>
+                            <li><a href='https://nba.udn.com/nba/story/6780/5777247'><p class="fs-5">8400萬美元純屬議價 施羅德稱湖人從未端出合約</p></a></li>
+                            <li><a href='https://nba.udn.com/nba/story/6780/5770536'><p class="fs-5">勇士簽下布萊德利補強後場 舊將貝爾也獲回歸機會</p></a></li>
+                            <li><a href='https://nba.udn.com/nba/story/6780/5782749'><p class="fs-5">同梯4人獲頂薪續約 狀元艾頓坦言仍在等待</p></a></li>
+                            <li><a href='https://nba.udn.com/nba/story/6780/5773899'><p class="fs-5">杜蘭特也列ESPN榜單首位 唐西奇排名超車柯瑞</p></a></li>
+
+                        </ul>
+                    </div>
+                    <div class='d-none d-md-block d-xl-none'>
+                        <img src='../day1.jpg' class='w-100'>
+                        <h5 class='mt-5 time'>精采好球:</h5><hr/>
+                        <iframe class='mt-1 w-100' height='480' src="https://www.youtube.com/embed/lz29FUCJWWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class='mt-1 w-100' height='480' src="https://www.youtube.com/embed/0OAUE7-ZRKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class='mt-1 w-100' height='480' src="https://www.youtube.com/embed/Urj74n-N1uQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h5 class='mt-5 time'>熱門文章:</h5><hr/>
+                        <ul>
+                            <li><a href='https://nba.udn.com/nba/story/6780/5772242'><p class="fs-4">鹽湖城電視台記者鬧烏龍 訪問克拉克森片段遭瘋傳</p></a></li>
+                            <li><a href='https://nba.udn.com/nba/story/6780/5777247'><p class="fs-4">8400萬美元純屬議價 施羅德稱湖人從未端出合約</p></a></li>
+                            <li><a href='https://nba.udn.com/nba/story/6780/5770536'><p class="fs-4">勇士簽下布萊德利補強後場 舊將貝爾也獲回歸機會</p></a></li>
+                            <li><a href='https://nba.udn.com/nba/story/6780/5782749'><p class="fs-4">同梯4人獲頂薪續約 狀元艾頓坦言仍在等待</p></a></li>
+                            <li><a href='https://nba.udn.com/nba/story/6780/5773899'><p class="fs-4">杜蘭特也列ESPN榜單首位 唐西奇排名超車柯瑞</p></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class='d-none d-xl-block col-xl-4 h-100'>
+                    <img src='../day1.jpg' class='w-100'>
+                    <h5 class='mt-5 time'>精采好球:</h5><hr/>
+                    <iframe class='ms-5 mt-1' src="https://www.youtube.com/embed/lz29FUCJWWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class='ms-5 mt-1' src="https://www.youtube.com/embed/0OAUE7-ZRKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class='ms-5 mt-1' src="https://www.youtube.com/embed/Urj74n-N1uQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h5 class='mt-5 time'>熱門文章:</h5><hr/>
+                    <ul>
+                        <li><a href='https://nba.udn.com/nba/story/6780/5772242'>鹽湖城電視台記者鬧烏龍 訪問克拉克森片段遭瘋傳</a></li>
+                        <li><a href='https://nba.udn.com/nba/story/6780/5777247'>8400萬美元純屬議價 施羅德稱湖人從未端出合約</a></li>
+                        <li><a href='https://nba.udn.com/nba/story/6780/5770536'>勇士簽下布萊德利補強後場 舊將貝爾也獲回歸機會</a></li>
+                        <li><a href='https://nba.udn.com/nba/story/6780/5782749'>同梯4人獲頂薪續約 狀元艾頓坦言仍在等待</a></li>
+                        <li><a href='https://nba.udn.com/nba/story/6780/5773899'>杜蘭特也列ESPN榜單首位 唐西奇排名超車柯瑞</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+          
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

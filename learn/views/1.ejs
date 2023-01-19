@@ -1,0 +1,50 @@
+<html>
+
+<head>
+
+<title>test</title>
+<script>
+    var cvs , ctx , img , src;
+    window.onload=function(){
+        cvs = document.getElementById("cvs")
+        ctx = cvs.getContext("2d")
+        var img = new Image();
+        img.src="../1.jpg";
+        img.onload = function(){
+            ctx.drawImage(this , 0 , 0 , cvs.width , cvs.height);
+        }
+    }
+
+    function loadfile(input){
+        var file = input.files[0];
+        var src = URL.createObjectURL(file);
+        var img = new Image();
+        img.src = src;
+        ctx.clearRect(0,0,800,300);
+        cvs.width=500;
+        cvs.height=200;
+        img.onload = function(){
+            ctx.drawImage(this , 0 , 0 ,500 , 200)
+        }
+    }
+
+    function save(){
+    var link = document.getElementById("download");
+    link.download = "image.jpg";
+    link.href =cvs.toDataURL("image/jpeg" , 1.0);
+    link.click();
+    }
+</script>
+
+</head>
+<body>
+    <div>
+        <input type="file" onchange="loadfile(this)">
+        <button onclick="save()">儲存</button>
+        <a id="download" crossorigin="anonymous"></a>
+    </div>
+
+    <canvas id="cvs" width="800" height="300" style="border:1px solid"></canvas>
+</body>
+
+</html>

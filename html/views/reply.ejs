@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<%- include('partial/head.ejs') %>
-<body>
+    <%- include('partial/head.ejs') %>
+<body background="11.jfif">
     <% let i=0; %>
     <% let str="B"; %>
     <% title.forEach(blog =>{ %>
@@ -9,13 +9,15 @@
             <% i++; %>
             <span style='color:blue ;' ><%= str %><%= i %></span>
             <h4 style='position:relative ; left:50px; margin-top:0px;'> <%= blog.reply %></h4>
-            <form action="/update" method="post">
-                <input type="hidden" value="<%= blog.id %>" name="id">
-                <input type="text" value="<%= blog.reply %>" name="reply">
-                <input type="hidden" value="<%= blog.personId %>" name="personId">
-                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                <button style="color:brown ; border:0px"  type='submit'>修改</button>
-            </form>
+            <% if(id==blog.userId){ %>
+                <form action="/update" method="post">
+                    <input type="hidden" value="<%= blog.id %>" name="id">
+                    <input type="text" value="<%= blog.reply %>" name="reply">
+                    <input type="hidden" value="<%= blog.personId %>" name="personId">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <button style="color:brown ; border:0px"  type='submit'>修改</button>
+                </form>
+            <% } %>
             <hr/>
         <% } %>
     <% }) %>

@@ -1,0 +1,1199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>首頁</title>
+    <style type="text/css">
+      .bg .navbar-nav .nav-link{
+        color:white
+      }
+      .bg .title {
+        color:white
+      }
+      .title {
+        color:white
+      }
+      .bg{
+        background-color: rgba(0, 0, 255, 0.836);
+      }
+      .name{
+        color:rgba(255, 208, 0, 0.788);
+      }
+      .back{
+        background-color: rgba(128, 128, 128, 0.281);
+      }
+      .inside{
+        background-color: white;
+      }
+      .dropdown-menu{
+        width: 414px;
+      }
+      .dropdown-menu ul li{
+        border:0px;
+      }
+      .list-group{
+        border-radius: 0px;
+      }
+      .block{
+        background-color:rgb(8, 8, 85);
+      }
+      .up{
+        height: 200px;
+      }
+      .table0{
+        width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <a class="navbar-brand title" href="/home">
+            <img src="../warrior.jfif" width="60" height="48" class="d-inline-block align-text-center d-none d-lg-inline-block">
+            Warriors
+          </a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link fw-bold" href='/game' aria-current="page">賽程</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fw-bold" href='/day' aria-current="page">聯盟重要日</a>
+            </li>
+            <li class="nav-item d-lg-none">
+              <a class="nav-link fw-bold" href='/team' aria-current="page"> 球隊</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  焦點球星
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href='/name/curry'>Stephen curry</a></li>
+                  <li><a class="dropdown-item" href='/name/klay'>Klay thompson</a></li>
+                  <li><a class="dropdown-item" href='/name/green'>Draymond green</a></li>
+                </ul>
+              </li>
+            <li class="nav-item dropdown d-none d-lg-block">
+              <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              球隊
+              </a>
+              <ul class="dropdown-menu p-0 text-center">
+                <li class="list-group-item bg" style='border:0px ; border-radius: 0px ;color:white'>東區</li>
+                <ul class="list-group list-group-horizontal">
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>東南組</li>
+                      <li class="list-group-item">亞特蘭大 老鷹</li>
+                      <li class="list-group-item">夏洛特 黄蜂</li>
+                      <li class="list-group-item">邁阿密 熱火</li>
+                      <li class="list-group-item">奧蘭多 魔術</li>
+                      <li class="list-group-item">華盛頓 巫師</li>
+                    </ul>   
+                  </ul>  
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>大西洋組</li>
+                      <li class="list-group-item">波士頓 塞爾蒂克</li>
+                      <li class="list-group-item">布魯克林 籃網</li>
+                      <li class="list-group-item">紐約 尼克</li>
+                      <li class="list-group-item">費城 76人</li>
+                      <li class="list-group-item">多倫多 暴龍</li>
+                    </ul>   
+                  </ul>
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>中央組</li>
+                      <li class="list-group-item">芝加哥 公牛</li>
+                      <li class="list-group-item">克里夫蘭 騎士</li>
+                      <li class="list-group-item">底特律 活塞</li>
+                      <li class="list-group-item">印第安納 溜馬</li>
+                      <li class="list-group-item">密爾瓦基 公鹿</li>
+                    </ul>   
+                  </ul>           
+                </ul>
+                <li class="list-group-item bg" style='border:0px ; border-radius: 0px ;color:white'>西區</li>
+                <ul class="list-group list-group-horizontal">
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>西南組</li>
+                      <li class="list-group-item">達拉斯 獨行俠</li>
+                      <li class="list-group-item">休士頓 火箭</li>
+                      <li class="list-group-item">曼菲斯 灰熊</li>
+                      <li class="list-group-item">紐奧良 鵜鶘</li>
+                      <li class="list-group-item">聖安東尼奧 馬刺</li>
+                    </ul>   
+                  </ul>  
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>西北組</li>
+                      <li class="list-group-item">丹佛 金塊</li>
+                      <li class="list-group-item">明尼蘇達 灰狼</li>
+                      <li class="list-group-item">奧克拉荷馬城 雷霆</li>
+                      <li class="list-group-item">波特蘭 拓荒者</li>
+                      <li class="list-group-item">猶他 爵士</li>
+                    </ul>   
+                  </ul>
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>太平洋組</li>
+                      <li class="list-group-item">金州 勇士</li>
+                      <li class="list-group-item">洛杉磯 快艇</li>
+                      <li class="list-group-item">洛杉磯 湖人</li>
+                      <li class="list-group-item">鳳凰城 太陽</li>
+                      <li class="list-group-item">沙加緬度 國王</li>
+                    </ul>   
+                  </ul>           
+                </ul>
+              </ul>   
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class='container-fluid back'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-7 offset-1 inside d-none d-lg-block'>
+                    <img src='../curry1.jfif' class='img-fluid up' style="float: left">
+                    <div class='up'>
+                      <div class='mt-3 mb-3'>
+                        <h4 class='name d-inline border-end border-3 pe-2'>30</h4>
+                        <h4 class='name d-inline ms-3 me-3'>Stephen Curry</h4>
+                        <p>後衛/金洲勇士</p>
+                      </div>
+                      <h5 style='color:blue'>身涯數據:</h5>
+                      <table class="table table-borderless d-inline ms-3">
+                        <tbody>
+                          <tr>
+                            <td class='pb-0 pt-0'>得分</td>
+                            <td class='pb-0 pt-0'>助攻</td>
+                            <td class='pb-0 pt-0'>籃板</td>
+                          </tr>
+                          <tr class='fw-bold'>
+                            <td class='pb-0 pt-0'>24.2</td>
+                            <td class='pb-0 pt-0' >6.5</td>
+                            <td class='pb-0 pt-0'>4.6</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class='mb-5 inside' data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+                      <h4 class='fw-bold' id="item-1">大學時期</h4><hr/>
+                      <p>高中快畢業時柯瑞相信自己的實力一定能吸引一流大學籃球隊的注意。但事與願違，沒有一所籃球名校願意為身材瘦弱的柯瑞提供機會，而父親的母校維吉尼亞理工大學也無法為柯瑞提供獎學金，最後他選擇了離家較近的戴維森學院就讀。</p>
+                      <p>做為一名大一新生，柯瑞於2006–07賽季以場均21.5分成為南方聯盟的最佳新人和得分王。並在南方聯盟一級錦標賽中投入了大學生涯的第113記三分球，打破凱德倫·克拉克在NCAA新秀賽季保持的三分球命中紀錄。</p>
+                      <p>大二賽季，柯瑞率領黑馬大衛森學院進入了瘋狂的三月，晉級八強戰。2008年的3月，大衛森學院相繼戰勝全國第七的貢薩格大學、NCAA二號種子喬治城大學和全美第三的威斯康辛大學，柯瑞成了史上四位NCAA淘汰賽前四場都得到30分的球員之一。在對陣該賽季的最終冠軍堪薩斯大學時，柯瑞投中了賽季的第159記三分球，創造了NCAA單季三分球的紀錄。</p>
+                      <h4 class='fw-bold'>NBA生涯</h4><hr/>
+                      <h5 class='fw-bold'>金州勇士（2009-至今）</h5>
+                      <h5 class='fw-bold' id="item-2-1">從備受肯定到飽受傷病困擾(2009-2012)</h5>
+                      <p>柯瑞在2009年NBA選秀被金州勇士隊在第一輪第七順位選中，隨即簽下四年合約，開始他在NBA的傳奇旅途。柯瑞在2009年NBA選秀被金州勇士隊在第一輪第七順位選中，隨即簽下四年合約，開始他在NBA的傳奇旅途。在2011年NBA全明星週末中，贏得了技術挑戰賽的冠軍，當季柯瑞得分達18.6分，5.8次助攻，3.9個籃板，1.5次抄截，其中3分球命中率更升至44.2%。2011–12賽季柯瑞因腳右腳踝受傷需要接受手術，全季只出場了26場，被戲稱玻璃人</p>
+                      <h5 class='fw-bold' id="item-2-2">崛起(2013-2014)</h5>
+                      <p>柯瑞擺脫傷患，季前與球隊續簽4年價值4千4百萬美元的新合約。勇士確定以庫里、湯普森、格林三核心打造球隊。柯瑞亦不負眾望，新球季頭兩個月，柯瑞場均取得超過20分，2月27日對尼克的一戰中更奪得其個人生涯得分新高54分。<br/><br/>同年隊友克雷·湯普森冒起，同樣擅長投射，二人開始有「浪花兄弟」(The Splash Brothers)之稱號。當季柯瑞射入272球3分球，打破了球星雷·艾倫269球的紀錄。<br/><br/>西區第一輪，勇士遇上第三種子丹佛金塊。這是柯瑞及其大部份隊友的首次季後賽比賽，最後在柯瑞的帶領下勇士隊以下克上，成功擊退金塊晉級。西區準決賽，勇士遇上傳統勁旅聖安東尼奧馬刺。柯瑞在第1場豪取44分及11次助攻，比賽拖入延長，最後不敵季後賽經驗老道的馬刺隊。勇士以2:4結束賽季。2013-2014球季柯瑞場均24得分8.5助攻4.3籃板，投進261球三分球，首度被選進NBA全明星賽，帶隊連續第二年打進季後賽。勇士隊於2014年季後賽首輪以系列賽比分3-4不敵洛杉磯快艇。</p>
+                      <h5 class='fw-bold' id="item-2-3">巔峰(2015-至今)</h5>
+                      <p>2014-2015球季，新任教練史蒂夫·科爾加盟，戰術大改革，開始以外圍投射為重點攻勢，這完全發揮了柯瑞的優勢，使他在縮短出場時間下仍可保持得分。柯瑞在這季平均得分23.87分、7助攻和4.3籃板，幫助球隊以16連勝的大好開局，最後例行賽取得67勝15負，聯盟排名第一的佳績，同時打破勇士創隊紀錄。同年獲得最有價值球員。<br/><br/>2015年季後賽首輪柯瑞率領勇士隊以4-0擊敗安東尼·戴維斯帶領的紐奧良鵜鶘，次輪以4-2淘汰馬克·蓋索帶領的曼菲斯灰熊，西區冠軍決賽以4-1淘汰詹姆士·哈登帶領的休士頓火箭，冠軍戰對戰由雷霸龍·詹姆士帶領的克利夫蘭騎士，在關鍵的第五場飆下37分及7顆三分的紀錄，幫助勇士取得聽牌優勢，最終第六戰於克利夫蘭騎士的主場以系列賽比分4-2贏得2014-15賽季NBA總冠軍。</p>
+                      <p>2015-2016球季，柯瑞在2月28日對奧克拉荷馬城雷霆投進12顆三分球，再次打破自己單季三分球紀錄，並追平聯盟單場三分球紀錄，尤其延長賽最後關頭，投進一顆0.6秒的準絕殺長三分，幫助勇士以121-118擊敗雷霆，最終柯瑞將單季三分球紀錄由286球一口氣推進至402球，三度打破紀錄。<br/><br/>在柯瑞的活躍表現下，勇士例行賽取得73勝9敗，打破了95-96年由麥可·喬丹帶領的芝加哥公牛所創的72勝10敗紀錄，亦以開季24連勝打創下NBA球隊開季連勝紀錄。同時，勇士以73勝創下了NBA歷史第一例行賽勝場。柯瑞例行賽平均30.1得分5.4籃板6.7助攻2.1抄截，首度雙料成為年度得分王、抄截王，投籃命中率50.4%，三分球命中率45.4%，罰球命中率90.8%，成為第7個進入「180俱樂部」的球員，在柯瑞的大爆發下，他以大熱姿態下蟬聯最有價值球員，更史無前例地獲得全數131張選票的第一名。可惜總決賽慘遭騎士雷霸龍和厄文強力回擊，勇士成為NBA史上頭一遭被1-3大逆轉，最終和總冠軍失之交臂。</p>
+                      <p>2016-2017球季，柯瑞在11月8日與安東尼·戴維斯帶領的紐奧良鵜鶘的比賽飆出13記三分球，打破原先自己與柯比·布萊恩及唐耶爾·馬歇爾所保持的12球紀錄，總冠軍賽，二度對決雷霸龍·詹姆士帶領的克里夫蘭騎士，柯瑞在關鍵時刻屢屢有驚人的三分投射。最終贏得系列賽，不僅拿下了三年內的第二座總冠軍，也成功為上個賽季總冠軍賽遭4-3逆轉雪恥，更寫下平NBA季後賽最少敗場的16勝1負成績。休賽季，柯瑞以5年2億美元的合約續留，成為NBA歷史上最高薪的合約</p>
+                      <p>2020-2021球季，柯瑞在2021年1月3日對波特蘭拓荒者的比賽中得到生涯新高62分。柯瑞在2021年1月24日客場出戰猶他爵士的比賽在第三節投進生涯第2561顆三分球，正式成為NBA投進第2多三分球的球員。柯瑞在2021年全明星周末的三分球大賽，第一輪拿到31分打破三分球大賽最高分紀錄，接著第二輪再拿最高的28分並贏得了個人生涯第二座三分球大賽冠軍。球季結束以場均32.0得分居聯盟第一，得到當季得分王，也成為勇士隊史得分王超越威爾特·張伯倫。</p>
+                      <div class='mb-5 inside'>
+                        <h4 class='fw-bold bg' id="item-3">生涯數據</h4>
+                        <div class="table-responsive">
+                          <table class="table table-borderless text-center table0">
+                            <thead>
+                              <tr class='block'>
+                                <th class='title fw-bold'>年度</th>
+                                <th class='title fw-bold'>球隊</th>
+                                <th class='title fw-bold'>比賽</th>
+                                <th class='title fw-bold'>先發</th>
+                                <th class='title fw-bold'>場均時間</th>
+                                <th class='title fw-bold'>FG%</th>
+                                <th class='title fw-bold'>3P%</th>
+                                <th class='title fw-bold'>FT%</th>
+                                <th class='title fw-bold'>籃板</th>
+                                <th class='title fw-bold'>得分</th>
+                                <th class='title fw-bold'>助攻</th>
+                                <th class='title fw-bold'>抄截</th>
+                                <th class='title fw-bold'>阻攻</th>
+                                <th class='title fw-bold'>失誤</th>
+                                <th class='title fw-bold'>犯規</th>
+                              </tr>
+                            </thead>
+                            <tbody class='fw-bold'>
+                              <tr>
+                                <td>2020</td>
+                                <td>勇士</td>
+                                <td>63</td>
+                                <td>63</td>
+                                <td>34.2</td>
+                                <td>48.2</td>
+                                <td>42.1</td>
+                                <td>91.6</td>
+                                <td>5.5</td>
+                                <td>32.0</td>
+                                <td>5.8</td>
+                                <td>1.2</td>
+                                <td>0.1</td>
+                                <td>3.4</td>
+                                <td>1.9</td>
+                              </tr>
+                              <tr>
+                                <td>2019</td>
+                                <td>勇士</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>27.8</td>
+                                <td>40.2</td>
+                                <td>24.5</td>
+                                <td>100.0</td>
+                                <td>5.2</td>
+                                <td>20.8</td>
+                                <td>6.6</td>
+                                <td>1.0</td>
+                                <td>0.4</td>
+                                <td>3.2</td>
+                                <td>2.2</td>
+                              </tr>
+                              <tr>
+                                <td>2018</td>
+                                <td>勇士</td>
+                                <td>69</td>
+                                <td>69</td>
+                                <td>33.8</td>
+                                <td>47.2</td>
+                                <td>43.7</td>
+                                <td>91.6</td>
+                                <td>5.4</td>
+                                <td>27.3</td>
+                                <td>5.2</td>
+                                <td>1.3</td>
+                                <td>0.4</td>
+                                <td>2.8</td>
+                                <td>2.4</td>
+                              </tr>
+                              <tr>
+                                <td>2017</td>
+                                <td>勇士</td>
+                                <td>51</td>
+                                <td>51</td>
+                                <td>32.0</td>
+                                <td>49.5</td>
+                                <td>42.3</td>
+                                <td>92.1</td>
+                                <td>5.1</td>
+                                <td>26.4</td>
+                                <td>6.1</td>
+                                <td>1.6</td>
+                                <td>0.2</td>
+                                <td>3.0</td>
+                                <td>2.3</td>
+                              </tr>
+                              <tr>
+                                <td>2016</td>
+                                <td>勇士</td>
+                                <td>79</td>
+                                <td>79</td>
+                                <td>33.4</td>
+                                <td>46.8</td>
+                                <td>41.1</td>
+                                <td>89.8</td>
+                                <td>4.5</td>
+                                <td>25.3</td>
+                                <td>6.6</td>
+                                <td>1.8</td>
+                                <td>0.2</td>
+                                <td>3.0</td>
+                                <td>2.3</td>
+                              </tr>
+                              <tr>
+                                <td>2015</td>
+                                <td>勇士</td>
+                                <td>79</td>
+                                <td>79</td>
+                                <td>34.2</td>
+                                <td>50.4</td>
+                                <td>45.4</td>
+                                <td>90.8</td>
+                                <td>5.5</td>
+                                <td>30.1</td>
+                                <td>6.7</td>
+                                <td>2.1</td>
+                                <td>0.2</td>
+                                <td>3.3</td>
+                                <td>2.0</td>
+                              </tr>
+                              <tr>
+                                <td>2014</td>
+                                <td>勇士</td>
+                                <td>80</td>
+                                <td>80</td>
+                                <td>32.7</td>
+                                <td>48.7</td>
+                                <td>44.3</td>
+                                <td>91.4</td>
+                                <td>4.3</td>
+                                <td>23.8</td>
+                                <td>7.7</td>
+                                <td>2.0</td>
+                                <td>0.2</td>
+                                <td>3.1</td>
+                                <td>2.0</td>
+                              </tr>
+                              <tr>
+                                <td>2013</td>
+                                <td>勇士</td>
+                                <td>78</td>
+                                <td>78</td>
+                                <td>36.5</td>
+                                <td>47.1</td>
+                                <td>42.4</td>
+                                <td>88.5</td>
+                                <td>4.3</td>
+                                <td>24.0</td>
+                                <td>8.5</td>
+                                <td>1.6</td>
+                                <td>0.2</td>
+                                <td>3.8</td>
+                                <td>2.5</td>
+                              </tr>
+                              <tr>
+                                <td>2012</td>
+                                <td>勇士</td>
+                                <td>78</td>
+                                <td>78</td>
+                                <td>38.2</td>
+                                <td>45.1</td>
+                                <td>45.3</td>
+                                <td>90.0</td>
+                                <td>4.1</td>
+                                <td>22.9</td>
+                                <td>6.9</td>
+                                <td>1.6</td>
+                                <td>0.2</td>
+                                <td>3.1</td>
+                                <td>2.5</td>
+                              </tr>
+                              <tr>
+                                <td>2011</td>
+                                <td>勇士</td>
+                                <td>26</td>
+                                <td>23</td>
+                                <td>28.2</td>
+                                <td>49.0</td>
+                                <td>45.5</td>
+                                <td>80.9</td>
+                                <td>3.4</td>
+                                <td>14.7</td>
+                                <td>5.3</td>
+                                <td>1.5</td>
+                                <td>0.3</td>
+                                <td>2.5</td>
+                                <td>2.4</td>
+                              </tr>
+                              <tr>
+                                <td>2010</td>
+                                <td>勇士</td>
+                                <td>74</td>
+                                <td>74</td>
+                                <td>33.6</td>
+                                <td>48.0</td>
+                                <td>44.2</td>
+                                <td>93.4</td>
+                                <td>3.9</td>
+                                <td>18.6</td>
+                                <td>5.8</td>
+                                <td>1.5</td>
+                                <td>0.3</td>
+                                <td>3.1</td>
+                                <td>3.2</td>
+                              </tr>
+                              <tr>
+                                <td>2009</td>
+                                <td>勇士</td>
+                                <td>80</td>
+                                <td>77</td>
+                                <td>36.2</td>
+                                <td>46.2</td>
+                                <td>43.7</td>
+                                <td>88.5</td>
+                                <td>4.5</td>
+                                <td>17.5</td>
+                                <td>5.9</td>
+                                <td>1.9</td>
+                                <td>0.2</td>
+                                <td>3.0</td>
+                                <td>3.2</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class='pb-5 inside'>
+                        <h4 class='fw-bold' id="item-4">獲得獎項</h4>
+                        <table class="table table-borderless text-center">
+                          <tbody>
+                            <tr class='bg'>
+                              <td class='pb-0 pt-0 title'>次數</td>
+                              <td class='pb-0 pt-0 title'>獎項</td>
+                            </tr>
+                            <tr class='fw-bold'>
+                              <td class='pb-0 pt-0'>7</td>
+                              <td class='pb-0 pt-0' >All-NBA</td>
+                            </tr>
+                            <tr class='fw-bold'>
+                              <td class='pb-0 pt-0'>1</td>
+                              <td class='pb-0 pt-0' >All-Rookie Team</td>
+                            </tr>
+                            <tr class='fw-bold'>
+                              <td class='pb-0 pt-0'>2</td>
+                              <td class='pb-0 pt-0' >NBA Most Valuable Player</td>
+                            </tr>
+                            <tr class='fw-bold'>
+                              <td class='pb-0 pt-0'>9</td>
+                              <td class='pb-0 pt-0' >NBA Player of the Month</td>
+                            </tr>
+                            <tr class='fw-bold'>
+                              <td class='pb-0 pt-0'>15</td>
+                              <td class='pb-0 pt-0' >NBA Player of the Week</td>
+                            </tr>
+                            <tr class='fw-bold'>
+                              <td class='pb-0 pt-0'>3</td>
+                              <td class='pb-0 pt-0' >NBA Rookie of the Month</td>
+                            </tr>
+                            <tr class='fw-bold'>
+                              <td class='pb-0 pt-0'>1</td>
+                              <td class='pb-0 pt-0' >NBA Sportsmanship</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+                <div class='col-3 inside d-none d-lg-block'>
+                  <div class='up d-inline'>
+                    <p class='mb-1 mt-3'>身高:190cm</p>
+                    <p class='mb-1'>體重:83.9kg</p>
+                    <p class='mb-1'>年紀:33</p>
+                    <p class='mb-1'>生日: 1988-03-14</p>
+                    <p class='mb-1'>選秀: 2009</p>
+                    <p class='mb-1'>大學: Davidson</p>
+                  </div>
+                  <nav id="navbar-example3" class="navbar navbar-light inside flex-column align-items-stretch p-3 mt-5">
+                    <a class="navbar-brand" href="#">目錄</a>
+                    <nav class="nav  flex-column">
+                      <a class="nav-link" href="#item-1">大學時期</a>
+                      <a class="nav-link" href="#item-2">NBA生涯</a>
+                      <nav class="nav flex-column">
+                        <a class="nav-link ms-3 my-1" href="#item-2-1">從備受肯定到飽受傷病困擾</a>
+                        <a class="nav-link ms-3 my-1" href="#item-2-2">崛起</a>
+                        <a class="nav-link ms-3 my-1" href="#item-2-3">巔峰</a>
+                      </nav>
+                      <a class="nav-link" href="#item-3">生涯數據</a>
+                      <a class="nav-link" href="#item-4">獲得獎項</a>
+                    </nav>
+                  </nav>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-10 d-none d-md-block d-lg-none offset-1' style='height:300px'>
+            <img src='../curry1.jfif' class='img-fluid h-100 w-100'>
+        </div>
+        <div class='up col-5 d-none d-md-block d-lg-none offset-1'>
+            <div class='mt-3 mb-3'>
+                <h4 class='name d-inline border-end border-3 pe-2'>30</h4>
+                <h4 class='name d-inline ms-3 me-3'>Stephen Curry</h4>
+                <p>後衛/金洲勇士</p>
+            </div>
+            <h5 style='color:blue'>身涯數據:</h5>
+            <table class="table table-borderless d-inline ms-3">
+              <tbody>
+                <tr>
+                    <td class='pb-0 pt-0'>得分</td>
+                    <td class='pb-0 pt-0'>助攻</td>
+                    <td class='pb-0 pt-0'>籃板</td>
+                </tr>
+                <tr class='fw-bold'>
+                    <td class='pb-0 pt-0'>24.2</td>
+                    <td class='pb-0 pt-0' >6.5</td>
+                    <td class='pb-0 pt-0'>4.6</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class='up col-5 d-none d-md-block d-lg-none'>
+            <p class='mb-1 mt-3'>身高:190cm</p>
+            <p class='mb-1'>體重:83.9kg</p>
+            <p class='mb-1'>年紀:33</p>
+            <p class='mb-1'>生日: 1988-03-14</p>
+            <p class='mb-1'>選秀: 2009</p>
+            <p class='mb-1'>大學: Davidson</p>
+        </div>
+        <div class='col-10 d-none d-md-block d-lg-none offset-1'>
+          <nav id="navbar-example3" class="navbar navbar-light inside flex-column align-items-stretch p-3">
+            <a class="nav-link dropdown-toggle block" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">目錄</a>
+            <ul class="dropdown-menu block" aria-labelledby="dropdownMenuLink">
+              <li><a class="nav-link" href="#item1-1">大學時期</a></li>
+              <li><a class="nav-link" href="#item1-2">NBA生涯</a></li>
+                <nav class="nav nav-pills flex-column">
+                  <a class="nav-link ms-3 my-1" href="#item1-2-1">從備受肯定到飽受傷病困擾</a>
+                  <a class="nav-link ms-3 my-1" href="#item1-2-2">崛起</a>
+                  <a class="nav-link ms-3 my-1" href="#item1-2-3">巔峰</a>
+                </nav>
+              <li><a class="nav-link" href="#item1-3">生涯數據</a></li>
+              <li><a class="nav-link" href="#item1-4">獲得獎項</a></li>
+            </ul>
+          </nav>
+          <div class='mb-5 inside' data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+            <h4 class='fw-bold' id="item1-1">大學時期</h4><hr/>
+            <p>高中快畢業時柯瑞相信自己的實力一定能吸引一流大學籃球隊的注意。但事與願違，沒有一所籃球名校願意為身材瘦弱的柯瑞提供機會，而父親的母校維吉尼亞理工大學也無法為柯瑞提供獎學金，最後他選擇了離家較近的戴維森學院就讀。</p>
+            <p>做為一名大一新生，柯瑞於2006–07賽季以場均21.5分成為南方聯盟的最佳新人和得分王。並在南方聯盟一級錦標賽中投入了大學生涯的第113記三分球，打破凱德倫·克拉克在NCAA新秀賽季保持的三分球命中紀錄。</p>
+            <p>大二賽季，柯瑞率領黑馬大衛森學院進入了瘋狂的三月，晉級八強戰。2008年的3月，大衛森學院相繼戰勝全國第七的貢薩格大學、NCAA二號種子喬治城大學和全美第三的威斯康辛大學，柯瑞成了史上四位NCAA淘汰賽前四場都得到30分的球員之一。在對陣該賽季的最終冠軍堪薩斯大學時，柯瑞投中了賽季的第159記三分球，創造了NCAA單季三分球的紀錄。</p>
+            <h4 class='fw-bold' id="item1-2">NBA生涯</h4><hr/>
+            <h5 class='fw-bold'>金州勇士（2009-至今）</h5>
+            <h5 class='fw-bold' id="item1-2-1">從備受肯定到飽受傷病困擾(2009-2012)</h5>
+            <p>柯瑞在2009年NBA選秀被金州勇士隊在第一輪第七順位選中，隨即簽下四年合約，開始他在NBA的傳奇旅途。柯瑞在2009年NBA選秀被金州勇士隊在第一輪第七順位選中，隨即簽下四年合約，開始他在NBA的傳奇旅途。在2011年NBA全明星週末中，贏得了技術挑戰賽的冠軍，當季柯瑞得分達18.6分，5.8次助攻，3.9個籃板，1.5次抄截，其中3分球命中率更升至44.2%。2011–12賽季柯瑞因腳右腳踝受傷需要接受手術，全季只出場了26場，被戲稱玻璃人</p>
+            <h5 class='fw-bold' id="item1-2-2">崛起(2013-2014)</h5>
+            <p>柯瑞擺脫傷患，季前與球隊續簽4年價值4千4百萬美元的新合約。勇士確定以庫里、湯普森、格林三核心打造球隊。柯瑞亦不負眾望，新球季頭兩個月，柯瑞場均取得超過20分，2月27日對尼克的一戰中更奪得其個人生涯得分新高54分。<br/><br/>同年隊友克雷·湯普森冒起，同樣擅長投射，二人開始有「浪花兄弟」(The Splash Brothers)之稱號。當季柯瑞射入272球3分球，打破了球星雷·艾倫269球的紀錄。<br/><br/>西區第一輪，勇士遇上第三種子丹佛金塊。這是柯瑞及其大部份隊友的首次季後賽比賽，最後在柯瑞的帶領下勇士隊以下克上，成功擊退金塊晉級。西區準決賽，勇士遇上傳統勁旅聖安東尼奧馬刺。柯瑞在第1場豪取44分及11次助攻，比賽拖入延長，最後不敵季後賽經驗老道的馬刺隊。勇士以2:4結束賽季。2013-2014球季柯瑞場均24得分8.5助攻4.3籃板，投進261球三分球，首度被選進NBA全明星賽，帶隊連續第二年打進季後賽。勇士隊於2014年季後賽首輪以系列賽比分3-4不敵洛杉磯快艇。</p>
+            <h5 class='fw-bold' id="item1-2-3">巔峰(2015-至今)</h5>
+            <p>2014-2015球季，新任教練史蒂夫·科爾加盟，戰術大改革，開始以外圍投射為重點攻勢，這完全發揮了柯瑞的優勢，使他在縮短出場時間下仍可保持得分。柯瑞在這季平均得分23.87分、7助攻和4.3籃板，幫助球隊以16連勝的大好開局，最後例行賽取得67勝15負，聯盟排名第一的佳績，同時打破勇士創隊紀錄。同年獲得最有價值球員。<br/><br/>2015年季後賽首輪柯瑞率領勇士隊以4-0擊敗安東尼·戴維斯帶領的紐奧良鵜鶘，次輪以4-2淘汰馬克·蓋索帶領的曼菲斯灰熊，西區冠軍決賽以4-1淘汰詹姆士·哈登帶領的休士頓火箭，冠軍戰對戰由雷霸龍·詹姆士帶領的克利夫蘭騎士，在關鍵的第五場飆下37分及7顆三分的紀錄，幫助勇士取得聽牌優勢，最終第六戰於克利夫蘭騎士的主場以系列賽比分4-2贏得2014-15賽季NBA總冠軍。</p>
+            <p>2015-2016球季，柯瑞在2月28日對奧克拉荷馬城雷霆投進12顆三分球，再次打破自己單季三分球紀錄，並追平聯盟單場三分球紀錄，尤其延長賽最後關頭，投進一顆0.6秒的準絕殺長三分，幫助勇士以121-118擊敗雷霆，最終柯瑞將單季三分球紀錄由286球一口氣推進至402球，三度打破紀錄。<br/><br/>在柯瑞的活躍表現下，勇士例行賽取得73勝9敗，打破了95-96年由麥可·喬丹帶領的芝加哥公牛所創的72勝10敗紀錄，亦以開季24連勝打創下NBA球隊開季連勝紀錄。同時，勇士以73勝創下了NBA歷史第一例行賽勝場。柯瑞例行賽平均30.1得分5.4籃板6.7助攻2.1抄截，首度雙料成為年度得分王、抄截王，投籃命中率50.4%，三分球命中率45.4%，罰球命中率90.8%，成為第7個進入「180俱樂部」的球員，在柯瑞的大爆發下，他以大熱姿態下蟬聯最有價值球員，更史無前例地獲得全數131張選票的第一名。可惜總決賽慘遭騎士雷霸龍和厄文強力回擊，勇士成為NBA史上頭一遭被1-3大逆轉，最終和總冠軍失之交臂。</p>
+            <p>2016-2017球季，柯瑞在11月8日與安東尼·戴維斯帶領的紐奧良鵜鶘的比賽飆出13記三分球，打破原先自己與柯比·布萊恩及唐耶爾·馬歇爾所保持的12球紀錄，總冠軍賽，二度對決雷霸龍·詹姆士帶領的克里夫蘭騎士，柯瑞在關鍵時刻屢屢有驚人的三分投射。最終贏得系列賽，不僅拿下了三年內的第二座總冠軍，也成功為上個賽季總冠軍賽遭4-3逆轉雪恥，更寫下平NBA季後賽最少敗場的16勝1負成績。休賽季，柯瑞以5年2億美元的合約續留，成為NBA歷史上最高薪的合約</p>
+            <p>2020-2021球季，柯瑞在2021年1月3日對波特蘭拓荒者的比賽中得到生涯新高62分。柯瑞在2021年1月24日客場出戰猶他爵士的比賽在第三節投進生涯第2561顆三分球，正式成為NBA投進第2多三分球的球員。柯瑞在2021年全明星周末的三分球大賽，第一輪拿到31分打破三分球大賽最高分紀錄，接著第二輪再拿最高的28分並贏得了個人生涯第二座三分球大賽冠軍。球季結束以場均32.0得分居聯盟第一，得到當季得分王，也成為勇士隊史得分王超越威爾特·張伯倫。</p>
+          </div>
+          <div class='mb-5 inside' id="item1-3">
+            <h4 class='fw-bold bg'>生涯數據</h4>
+            <div class="table-responsive">
+              <table class="table table-borderless text-center table0">
+                <thead>
+                  <tr class='block'>
+                    <th class='title fw-bold'>年度</th>
+                    <th class='title fw-bold'>球隊</th>
+                    <th class='title fw-bold'>比賽</th>
+                    <th class='title fw-bold'>先發</th>
+                    <th class='title fw-bold'>場均時間</th>
+                    <th class='title fw-bold'>FG%</th>
+                    <th class='title fw-bold'>3P%</th>
+                    <th class='title fw-bold'>FT%</th>
+                    <th class='title fw-bold'>籃板</th>
+                    <th class='title fw-bold'>得分</th>
+                    <th class='title fw-bold'>助攻</th>
+                    <th class='title fw-bold'>抄截</th>
+                    <th class='title fw-bold'>阻攻</th>
+                    <th class='title fw-bold'>失誤</th>
+                    <th class='title fw-bold'>犯規</th>
+                  </tr>
+                </thead>
+                <tbody class='fw-bold'>
+                  <tr>
+                    <td>2020</td>
+                    <td>勇士</td>
+                    <td>63</td>
+                    <td>63</td>
+                    <td>34.2</td>
+                    <td>48.2</td>
+                    <td>42.1</td>
+                    <td>91.6</td>
+                    <td>5.5</td>
+                    <td>32.0</td>
+                    <td>5.8</td>
+                    <td>1.2</td>
+                    <td>0.1</td>
+                    <td>3.4</td>
+                    <td>1.9</td>
+                  </tr>
+                  <tr>
+                    <td>2019</td>
+                    <td>勇士</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>27.8</td>
+                    <td>40.2</td>
+                    <td>24.5</td>
+                    <td>100.0</td>
+                    <td>5.2</td>
+                    <td>20.8</td>
+                    <td>6.6</td>
+                    <td>1.0</td>
+                    <td>0.4</td>
+                    <td>3.2</td>
+                    <td>2.2</td>
+                  </tr>
+                  <tr>
+                    <td>2018</td>
+                    <td>勇士</td>
+                    <td>69</td>
+                    <td>69</td>
+                    <td>33.8</td>
+                    <td>47.2</td>
+                    <td>43.7</td>
+                    <td>91.6</td>
+                    <td>5.4</td>
+                    <td>27.3</td>
+                    <td>5.2</td>
+                    <td>1.3</td>
+                    <td>0.4</td>
+                    <td>2.8</td>
+                    <td>2.4</td>
+                  </tr>
+                  <tr>
+                    <td>2017</td>
+                    <td>勇士</td>
+                    <td>51</td>
+                    <td>51</td>
+                    <td>32.0</td>
+                    <td>49.5</td>
+                    <td>42.3</td>
+                    <td>92.1</td>
+                    <td>5.1</td>
+                    <td>26.4</td>
+                    <td>6.1</td>
+                    <td>1.6</td>
+                    <td>0.2</td>
+                    <td>3.0</td>
+                    <td>2.3</td>
+                  </tr>
+                  <tr>
+                    <td>2016</td>
+                    <td>勇士</td>
+                    <td>79</td>
+                    <td>79</td>
+                    <td>33.4</td>
+                    <td>46.8</td>
+                    <td>41.1</td>
+                    <td>89.8</td>
+                    <td>4.5</td>
+                    <td>25.3</td>
+                    <td>6.6</td>
+                    <td>1.8</td>
+                    <td>0.2</td>
+                    <td>3.0</td>
+                    <td>2.3</td>
+                  </tr>
+                  <tr>
+                    <td>2015</td>
+                    <td>勇士</td>
+                    <td>79</td>
+                    <td>79</td>
+                    <td>34.2</td>
+                    <td>50.4</td>
+                    <td>45.4</td>
+                    <td>90.8</td>
+                    <td>5.5</td>
+                    <td>30.1</td>
+                    <td>6.7</td>
+                    <td>2.1</td>
+                    <td>0.2</td>
+                    <td>3.3</td>
+                    <td>2.0</td>
+                  </tr>
+                  <tr>
+                    <td>2014</td>
+                    <td>勇士</td>
+                    <td>80</td>
+                    <td>80</td>
+                    <td>32.7</td>
+                    <td>48.7</td>
+                    <td>44.3</td>
+                    <td>91.4</td>
+                    <td>4.3</td>
+                    <td>23.8</td>
+                    <td>7.7</td>
+                    <td>2.0</td>
+                    <td>0.2</td>
+                    <td>3.1</td>
+                    <td>2.0</td>
+                  </tr>
+                  <tr>
+                    <td>2013</td>
+                    <td>勇士</td>
+                    <td>78</td>
+                    <td>78</td>
+                    <td>36.5</td>
+                    <td>47.1</td>
+                    <td>42.4</td>
+                    <td>88.5</td>
+                    <td>4.3</td>
+                    <td>24.0</td>
+                    <td>8.5</td>
+                    <td>1.6</td>
+                    <td>0.2</td>
+                    <td>3.8</td>
+                    <td>2.5</td>
+                  </tr>
+                  <tr>
+                    <td>2012</td>
+                    <td>勇士</td>
+                    <td>78</td>
+                    <td>78</td>
+                    <td>38.2</td>
+                    <td>45.1</td>
+                    <td>45.3</td>
+                    <td>90.0</td>
+                    <td>4.1</td>
+                    <td>22.9</td>
+                    <td>6.9</td>
+                    <td>1.6</td>
+                    <td>0.2</td>
+                    <td>3.1</td>
+                    <td>2.5</td>
+                  </tr>
+                  <tr>
+                    <td>2011</td>
+                    <td>勇士</td>
+                    <td>26</td>
+                    <td>23</td>
+                    <td>28.2</td>
+                    <td>49.0</td>
+                    <td>45.5</td>
+                    <td>80.9</td>
+                    <td>3.4</td>
+                    <td>14.7</td>
+                    <td>5.3</td>
+                    <td>1.5</td>
+                    <td>0.3</td>
+                    <td>2.5</td>
+                    <td>2.4</td>
+                  </tr>
+                  <tr>
+                    <td>2010</td>
+                    <td>勇士</td>
+                    <td>74</td>
+                    <td>74</td>
+                    <td>33.6</td>
+                    <td>48.0</td>
+                    <td>44.2</td>
+                    <td>93.4</td>
+                    <td>3.9</td>
+                    <td>18.6</td>
+                    <td>5.8</td>
+                    <td>1.5</td>
+                    <td>0.3</td>
+                    <td>3.1</td>
+                    <td>3.2</td>
+                  </tr>
+                  <tr>
+                    <td>2009</td>
+                    <td>勇士</td>
+                    <td>80</td>
+                    <td>77</td>
+                    <td>36.2</td>
+                    <td>46.2</td>
+                    <td>43.7</td>
+                    <td>88.5</td>
+                    <td>4.5</td>
+                    <td>17.5</td>
+                    <td>5.9</td>
+                    <td>1.9</td>
+                    <td>0.2</td>
+                    <td>3.0</td>
+                    <td>3.2</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class='pb-5 inside' id="item1-4">
+            <h4 class='fw-bold'>獲得獎項</h4>
+            <table class="table table-borderless text-center">
+              <tbody>
+                <tr class='bg'>
+                  <td class='pb-0 pt-0 title'>次數</td>
+                  <td class='pb-0 pt-0 title'>獎項</td>
+                </tr>
+                <tr class='fw-bold'>
+                  <td class='pb-0 pt-0'>7</td>
+                  <td class='pb-0 pt-0' >All-NBA</td>
+                </tr>
+                <tr class='fw-bold'>
+                  <td class='pb-0 pt-0'>1</td>
+                  <td class='pb-0 pt-0' >All-Rookie Team</td>
+                </tr>
+                <tr class='fw-bold'>
+                  <td class='pb-0 pt-0'>2</td>
+                  <td class='pb-0 pt-0' >NBA Most Valuable Player</td>
+                </tr>
+                <tr class='fw-bold'>
+                  <td class='pb-0 pt-0'>9</td>
+                  <td class='pb-0 pt-0' >NBA Player of the Month</td>
+                </tr>
+                <tr class='fw-bold'>
+                  <td class='pb-0 pt-0'>15</td>
+                  <td class='pb-0 pt-0' >NBA Player of the Week</td>
+                </tr>
+                <tr class='fw-bold'>
+                  <td class='pb-0 pt-0'>3</td>
+                  <td class='pb-0 pt-0' >NBA Rookie of the Month</td>
+                </tr>
+                <tr class='fw-bold'>
+                  <td class='pb-0 pt-0'>1</td>
+                  <td class='pb-0 pt-0' >NBA Sportsmanship</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='container'>
+        <div class='row'>
+            <div class='up d-md-none'>
+                <img src='../curry1.jfif' class='img-fluid h-100 w-100'>
+            </div>
+            <div class='up col-6 d-md-none'>
+              <div class='mt-3 mb-3'>
+                  <h4 class='name d-inline border-end border-3 pe-2'>30</h4>
+                  <h4 class='name d-inline ms-3 me-3'>Stephen Curry</h4>
+                  <p>後衛/金洲勇士</p>
+              </div>
+              <h5 style='color:blue'>身涯數據:</h5>
+              <table class="table table-borderless d-inline ms-3">
+                <tbody>
+                    <tr>
+                        <td class='pb-0 pt-0'>得分</td>
+                        <td class='pb-0 pt-0'>助攻</td>
+                        <td class='pb-0 pt-0'>籃板</td>
+                    </tr>
+                    <tr class='fw-bold'>
+                        <td class='pb-0 pt-0'>24.2</td>
+                        <td class='pb-0 pt-0' >6.5</td>
+                        <td class='pb-0 pt-0'>4.6</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class='up col-6 d-md-none'>
+                <p class='mb-1 mt-3'>身高:190cm</p>
+                <p class='mb-1'>體重:83.9kg</p>
+                <p class='mb-1'>年紀:33</p>
+                <p class='mb-1'>生日: 1988-03-14</p>
+                <p class='mb-1'>選秀: 2009</p>
+                <p class='mb-1'>大學: Davidson</p>
+            </div>
+            <div class='col-12 d-md-none'>
+              <nav id="navbar-example3" class="navbar navbar-light inside flex-column align-items-stretch p-3">
+                <a class="nav-link dropdown-toggle block" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">目錄</a>
+                <ul class="dropdown-menu block" aria-labelledby="dropdownMenuLink">
+                  <li><a class="nav-link" href="#item2-1">大學時期</a></li>
+                  <li><a class="nav-link" href="#item2-2">NBA生涯</a></li>
+                    <nav class="nav nav-pills flex-column">
+                      <a class="nav-link ms-3 my-1" href="#item2-2-1">從備受肯定到飽受傷病困擾</a>
+                      <a class="nav-link ms-3 my-1" href="#item2-2-2">崛起</a>
+                      <a class="nav-link ms-3 my-1" href="#item2-2-3">巔峰</a>
+                    </nav>
+                  <li><a class="nav-link" href="#item2-3">生涯數據</a></li>
+                  <li><a class="nav-link" href="#item2-4">獲得獎項</a></li>
+                </ul>
+              </nav>
+              <div class='mb-5 inside' data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+                <h4 class='fw-bold' id="item2-1">大學時期</h4><hr/>
+                <p>高中快畢業時柯瑞相信自己的實力一定能吸引一流大學籃球隊的注意。但事與願違，沒有一所籃球名校願意為身材瘦弱的柯瑞提供機會，而父親的母校維吉尼亞理工大學也無法為柯瑞提供獎學金，最後他選擇了離家較近的戴維森學院就讀。</p>
+                <p>做為一名大一新生，柯瑞於2006–07賽季以場均21.5分成為南方聯盟的最佳新人和得分王。並在南方聯盟一級錦標賽中投入了大學生涯的第113記三分球，打破凱德倫·克拉克在NCAA新秀賽季保持的三分球命中紀錄。</p>
+                <p>大二賽季，柯瑞率領黑馬大衛森學院進入了瘋狂的三月，晉級八強戰。2008年的3月，大衛森學院相繼戰勝全國第七的貢薩格大學、NCAA二號種子喬治城大學和全美第三的威斯康辛大學，柯瑞成了史上四位NCAA淘汰賽前四場都得到30分的球員之一。在對陣該賽季的最終冠軍堪薩斯大學時，柯瑞投中了賽季的第159記三分球，創造了NCAA單季三分球的紀錄。</p>
+                <h4 class='fw-bold' id="item2-2">NBA生涯</h4><hr/>
+                <h5 class='fw-bold'>金州勇士（2009-至今）</h5>
+                <h5 class='fw-bold' id="item2-2-1">從備受肯定到飽受傷病困擾(2009-2012)</h5>
+                <p>柯瑞在2009年NBA選秀被金州勇士隊在第一輪第七順位選中，隨即簽下四年合約，開始他在NBA的傳奇旅途。柯瑞在2009年NBA選秀被金州勇士隊在第一輪第七順位選中，隨即簽下四年合約，開始他在NBA的傳奇旅途。在2011年NBA全明星週末中，贏得了技術挑戰賽的冠軍，當季柯瑞得分達18.6分，5.8次助攻，3.9個籃板，1.5次抄截，其中3分球命中率更升至44.2%。2011–12賽季柯瑞因腳右腳踝受傷需要接受手術，全季只出場了26場，被戲稱玻璃人</p>
+                <h5 class='fw-bold' id="item2-2-2">崛起(2013-2014)</h5>
+                <p>柯瑞擺脫傷患，季前與球隊續簽4年價值4千4百萬美元的新合約。勇士確定以庫里、湯普森、格林三核心打造球隊。柯瑞亦不負眾望，新球季頭兩個月，柯瑞場均取得超過20分，2月27日對尼克的一戰中更奪得其個人生涯得分新高54分。<br/><br/>同年隊友克雷·湯普森冒起，同樣擅長投射，二人開始有「浪花兄弟」(The Splash Brothers)之稱號。當季柯瑞射入272球3分球，打破了球星雷·艾倫269球的紀錄。<br/><br/>西區第一輪，勇士遇上第三種子丹佛金塊。這是柯瑞及其大部份隊友的首次季後賽比賽，最後在柯瑞的帶領下勇士隊以下克上，成功擊退金塊晉級。西區準決賽，勇士遇上傳統勁旅聖安東尼奧馬刺。柯瑞在第1場豪取44分及11次助攻，比賽拖入延長，最後不敵季後賽經驗老道的馬刺隊。勇士以2:4結束賽季。2013-2014球季柯瑞場均24得分8.5助攻4.3籃板，投進261球三分球，首度被選進NBA全明星賽，帶隊連續第二年打進季後賽。勇士隊於2014年季後賽首輪以系列賽比分3-4不敵洛杉磯快艇。</p>
+                <h5 class='fw-bold' id="item2-2-3">巔峰(2015-至今)</h5>
+                <p>2014-2015球季，新任教練史蒂夫·科爾加盟，戰術大改革，開始以外圍投射為重點攻勢，這完全發揮了柯瑞的優勢，使他在縮短出場時間下仍可保持得分。柯瑞在這季平均得分23.87分、7助攻和4.3籃板，幫助球隊以16連勝的大好開局，最後例行賽取得67勝15負，聯盟排名第一的佳績，同時打破勇士創隊紀錄。同年獲得最有價值球員。<br/><br/>2015年季後賽首輪柯瑞率領勇士隊以4-0擊敗安東尼·戴維斯帶領的紐奧良鵜鶘，次輪以4-2淘汰馬克·蓋索帶領的曼菲斯灰熊，西區冠軍決賽以4-1淘汰詹姆士·哈登帶領的休士頓火箭，冠軍戰對戰由雷霸龍·詹姆士帶領的克利夫蘭騎士，在關鍵的第五場飆下37分及7顆三分的紀錄，幫助勇士取得聽牌優勢，最終第六戰於克利夫蘭騎士的主場以系列賽比分4-2贏得2014-15賽季NBA總冠軍。</p>
+                <p>2015-2016球季，柯瑞在2月28日對奧克拉荷馬城雷霆投進12顆三分球，再次打破自己單季三分球紀錄，並追平聯盟單場三分球紀錄，尤其延長賽最後關頭，投進一顆0.6秒的準絕殺長三分，幫助勇士以121-118擊敗雷霆，最終柯瑞將單季三分球紀錄由286球一口氣推進至402球，三度打破紀錄。<br/><br/>在柯瑞的活躍表現下，勇士例行賽取得73勝9敗，打破了95-96年由麥可·喬丹帶領的芝加哥公牛所創的72勝10敗紀錄，亦以開季24連勝打創下NBA球隊開季連勝紀錄。同時，勇士以73勝創下了NBA歷史第一例行賽勝場。柯瑞例行賽平均30.1得分5.4籃板6.7助攻2.1抄截，首度雙料成為年度得分王、抄截王，投籃命中率50.4%，三分球命中率45.4%，罰球命中率90.8%，成為第7個進入「180俱樂部」的球員，在柯瑞的大爆發下，他以大熱姿態下蟬聯最有價值球員，更史無前例地獲得全數131張選票的第一名。可惜總決賽慘遭騎士雷霸龍和厄文強力回擊，勇士成為NBA史上頭一遭被1-3大逆轉，最終和總冠軍失之交臂。</p>
+                <p>2016-2017球季，柯瑞在11月8日與安東尼·戴維斯帶領的紐奧良鵜鶘的比賽飆出13記三分球，打破原先自己與柯比·布萊恩及唐耶爾·馬歇爾所保持的12球紀錄，總冠軍賽，二度對決雷霸龍·詹姆士帶領的克里夫蘭騎士，柯瑞在關鍵時刻屢屢有驚人的三分投射。最終贏得系列賽，不僅拿下了三年內的第二座總冠軍，也成功為上個賽季總冠軍賽遭4-3逆轉雪恥，更寫下平NBA季後賽最少敗場的16勝1負成績。休賽季，柯瑞以5年2億美元的合約續留，成為NBA歷史上最高薪的合約</p>
+                <p>2020-2021球季，柯瑞在2021年1月3日對波特蘭拓荒者的比賽中得到生涯新高62分。柯瑞在2021年1月24日客場出戰猶他爵士的比賽在第三節投進生涯第2561顆三分球，正式成為NBA投進第2多三分球的球員。柯瑞在2021年全明星周末的三分球大賽，第一輪拿到31分打破三分球大賽最高分紀錄，接著第二輪再拿最高的28分並贏得了個人生涯第二座三分球大賽冠軍。球季結束以場均32.0得分居聯盟第一，得到當季得分王，也成為勇士隊史得分王超越威爾特·張伯倫。</p>
+              </div>
+              <div class='mb-5 inside' id="item2-3">
+                <h4 class='fw-bold bg'>生涯數據</h4>
+                <div class="table-responsive">
+                  <table class="table table-borderless text-center table0">
+                    <thead>
+                      <tr class='block'>
+                        <th class='title fw-bold'>年度</th>
+                        <th class='title fw-bold'>球隊</th>
+                        <th class='title fw-bold'>比賽</th>
+                        <th class='title fw-bold'>先發</th>
+                        <th class='title fw-bold'>場均時間</th>
+                        <th class='title fw-bold'>FG%</th>
+                        <th class='title fw-bold'>3P%</th>
+                        <th class='title fw-bold'>FT%</th>
+                        <th class='title fw-bold'>籃板</th>
+                        <th class='title fw-bold'>得分</th>
+                        <th class='title fw-bold'>助攻</th>
+                        <th class='title fw-bold'>抄截</th>
+                        <th class='title fw-bold'>阻攻</th>
+                        <th class='title fw-bold'>失誤</th>
+                        <th class='title fw-bold'>犯規</th>
+                      </tr>
+                    </thead>
+                    <tbody class='fw-bold'>
+                      <tr>
+                        <td>2020</td>
+                        <td>勇士</td>
+                        <td>63</td>
+                        <td>63</td>
+                        <td>34.2</td>
+                        <td>48.2</td>
+                        <td>42.1</td>
+                        <td>91.6</td>
+                        <td>5.5</td>
+                        <td>32.0</td>
+                        <td>5.8</td>
+                        <td>1.2</td>
+                        <td>0.1</td>
+                        <td>3.4</td>
+                        <td>1.9</td>
+                      </tr>
+                      <tr>
+                        <td>2019</td>
+                        <td>勇士</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>27.8</td>
+                        <td>40.2</td>
+                        <td>24.5</td>
+                        <td>100.0</td>
+                        <td>5.2</td>
+                        <td>20.8</td>
+                        <td>6.6</td>
+                        <td>1.0</td>
+                        <td>0.4</td>
+                        <td>3.2</td>
+                        <td>2.2</td>
+                      </tr>
+                      <tr>
+                        <td>2018</td>
+                        <td>勇士</td>
+                        <td>69</td>
+                        <td>69</td>
+                        <td>33.8</td>
+                        <td>47.2</td>
+                        <td>43.7</td>
+                        <td>91.6</td>
+                        <td>5.4</td>
+                        <td>27.3</td>
+                        <td>5.2</td>
+                        <td>1.3</td>
+                        <td>0.4</td>
+                        <td>2.8</td>
+                        <td>2.4</td>
+                      </tr>
+                      <tr>
+                        <td>2017</td>
+                        <td>勇士</td>
+                        <td>51</td>
+                        <td>51</td>
+                        <td>32.0</td>
+                        <td>49.5</td>
+                        <td>42.3</td>
+                        <td>92.1</td>
+                        <td>5.1</td>
+                        <td>26.4</td>
+                        <td>6.1</td>
+                        <td>1.6</td>
+                        <td>0.2</td>
+                        <td>3.0</td>
+                        <td>2.3</td>
+                      </tr>
+                      <tr>
+                        <td>2016</td>
+                        <td>勇士</td>
+                        <td>79</td>
+                        <td>79</td>
+                        <td>33.4</td>
+                        <td>46.8</td>
+                        <td>41.1</td>
+                        <td>89.8</td>
+                        <td>4.5</td>
+                        <td>25.3</td>
+                        <td>6.6</td>
+                        <td>1.8</td>
+                        <td>0.2</td>
+                        <td>3.0</td>
+                        <td>2.3</td>
+                      </tr>
+                      <tr>
+                        <td>2015</td>
+                        <td>勇士</td>
+                        <td>79</td>
+                        <td>79</td>
+                        <td>34.2</td>
+                        <td>50.4</td>
+                        <td>45.4</td>
+                        <td>90.8</td>
+                        <td>5.5</td>
+                        <td>30.1</td>
+                        <td>6.7</td>
+                        <td>2.1</td>
+                        <td>0.2</td>
+                        <td>3.3</td>
+                        <td>2.0</td>
+                      </tr>
+                      <tr>
+                        <td>2014</td>
+                        <td>勇士</td>
+                        <td>80</td>
+                        <td>80</td>
+                        <td>32.7</td>
+                        <td>48.7</td>
+                        <td>44.3</td>
+                        <td>91.4</td>
+                        <td>4.3</td>
+                        <td>23.8</td>
+                        <td>7.7</td>
+                        <td>2.0</td>
+                        <td>0.2</td>
+                        <td>3.1</td>
+                        <td>2.0</td>
+                      </tr>
+                      <tr>
+                        <td>2013</td>
+                        <td>勇士</td>
+                        <td>78</td>
+                        <td>78</td>
+                        <td>36.5</td>
+                        <td>47.1</td>
+                        <td>42.4</td>
+                        <td>88.5</td>
+                        <td>4.3</td>
+                        <td>24.0</td>
+                        <td>8.5</td>
+                        <td>1.6</td>
+                        <td>0.2</td>
+                        <td>3.8</td>
+                        <td>2.5</td>
+                      </tr>
+                      <tr>
+                        <td>2012</td>
+                        <td>勇士</td>
+                        <td>78</td>
+                        <td>78</td>
+                        <td>38.2</td>
+                        <td>45.1</td>
+                        <td>45.3</td>
+                        <td>90.0</td>
+                        <td>4.1</td>
+                        <td>22.9</td>
+                        <td>6.9</td>
+                        <td>1.6</td>
+                        <td>0.2</td>
+                        <td>3.1</td>
+                        <td>2.5</td>
+                      </tr>
+                      <tr>
+                        <td>2011</td>
+                        <td>勇士</td>
+                        <td>26</td>
+                        <td>23</td>
+                        <td>28.2</td>
+                        <td>49.0</td>
+                        <td>45.5</td>
+                        <td>80.9</td>
+                        <td>3.4</td>
+                        <td>14.7</td>
+                        <td>5.3</td>
+                        <td>1.5</td>
+                        <td>0.3</td>
+                        <td>2.5</td>
+                        <td>2.4</td>
+                      </tr>
+                      <tr>
+                        <td>2010</td>
+                        <td>勇士</td>
+                        <td>74</td>
+                        <td>74</td>
+                        <td>33.6</td>
+                        <td>48.0</td>
+                        <td>44.2</td>
+                        <td>93.4</td>
+                        <td>3.9</td>
+                        <td>18.6</td>
+                        <td>5.8</td>
+                        <td>1.5</td>
+                        <td>0.3</td>
+                        <td>3.1</td>
+                        <td>3.2</td>
+                      </tr>
+                      <tr>
+                        <td>2009</td>
+                        <td>勇士</td>
+                        <td>80</td>
+                        <td>77</td>
+                        <td>36.2</td>
+                        <td>46.2</td>
+                        <td>43.7</td>
+                        <td>88.5</td>
+                        <td>4.5</td>
+                        <td>17.5</td>
+                        <td>5.9</td>
+                        <td>1.9</td>
+                        <td>0.2</td>
+                        <td>3.0</td>
+                        <td>3.2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class='pb-5 inside' id="item2-4">
+                <h4 class='fw-bold'>獲得獎項</h4>
+                <table class="table table-borderless text-center">
+                  <tbody>
+                    <tr class='bg'>
+                      <td class='pb-0 pt-0 title'>次數</td>
+                      <td class='pb-0 pt-0 title'>獎項</td>
+                    </tr>
+                    <tr class='fw-bold'>
+                      <td class='pb-0 pt-0'>7</td>
+                      <td class='pb-0 pt-0' >All-NBA</td>
+                    </tr>
+                    <tr class='fw-bold'>
+                      <td class='pb-0 pt-0'>1</td>
+                      <td class='pb-0 pt-0' >All-Rookie Team</td>
+                    </tr>
+                    <tr class='fw-bold'>
+                      <td class='pb-0 pt-0'>2</td>
+                      <td class='pb-0 pt-0' >NBA Most Valuable Player</td>
+                    </tr>
+                    <tr class='fw-bold'>
+                      <td class='pb-0 pt-0'>9</td>
+                      <td class='pb-0 pt-0' >NBA Player of the Month</td>
+                    </tr>
+                    <tr class='fw-bold'>
+                      <td class='pb-0 pt-0'>15</td>
+                      <td class='pb-0 pt-0' >NBA Player of the Week</td>
+                    </tr>
+                    <tr class='fw-bold'>
+                      <td class='pb-0 pt-0'>3</td>
+                      <td class='pb-0 pt-0' >NBA Rookie of the Month</td>
+                    </tr>
+                    <tr class='fw-bold'>
+                      <td class='pb-0 pt-0'>1</td>
+                      <td class='pb-0 pt-0' >NBA Sportsmanship</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+    </div>
+          
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

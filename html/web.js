@@ -8,11 +8,18 @@ const User = require('./user');
 const session = require('express-session');
 const csrf = require('csurf');
 const flash = require('connect-flash');
+const crypto = require('crypto');
+const nodemailer = require('nodemailer');
+const sendgridtransporter = require('nodemailer-sendgrid-transport');
 const web = express();
-
+const transporter = nodemailer.createTransport(sendgridtransporter({
+    auth:{
+        api_key:'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'
+    }
+}))
 const csurf = csrf();
 const MongoDBStore = require('connect-mongodb-session')(session);
-const URI='mongodb+srv://shake:Lotus6061830133-@cluster0.o562y.mongodb.net/talks?retryWrites=true&w=majority';
+const URI='mongodb+srv://shake:Lotus6061830133-@cluster0.o562y.mongodb.net/?retryWrites=true&w=majority';
 const store = new MongoDBStore({
     uri:URI,
     collection:'session'
@@ -31,9 +38,13 @@ sequelize.sync()
    })
 
 let product=[];
+let replyid ='';
 Ask.belongsTo(People);
 People.hasMany(Ask);
-
+People.belongsTo(User);
+User.hasMany(People);
+Ask.belongsTo(User);
+User.hasMany(Ask);
 web.use(express.urlencoded({extended : true}));
 web.use(express.static('public'))
 web.set('view engine' , 'ejs');
@@ -46,6 +57,95 @@ web.use((req,res,next)=>{
 })
 web.use(flash());
 
+web.get('/reset/:token',(req,res,next)=>{
+    req.session.token=req.params.token;
+    req.session.save(()=>{
+        res.redirect('/token');
+    });
+})
+web.get('/token',(req,res,next)=>{
+    const token = req.session.token;
+    req.session.token=undefined;
+    req.session.save();
+    User.findOne({where:{resettoken:token}})
+        .then((user)=>{
+            if(!user){
+                return res.status(404).render('404');
+            }
+            res.render('new-password',{name:'new-password' , id:user.id,errormessage:req.flash('error')});
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+})
+
+web.post('/new-password' , (req,res,next)=>{
+    const prepassword = req.body.previouspassword;
+    const password = req.body.password;
+    User.findOne({where:{id:req.body.userid}})
+        .then((user)=>{
+            bcrypt
+                .compare(prepassword,user.password)
+                .then((result)=>{
+                    if(!result){
+                        req.flash('error','previous password is wrong !');
+                        return res.render('new-password' ,{name:'new-password', id:user.id,errormessage:req.flash('error')} );
+                    }
+                    bcrypt
+                        .hash(password,12)
+                        .then((hashpassword)=>{
+                            user.password = hashpassword;
+                            user.resettoken = null ;
+                            return user.save();
+                        })
+                        res.redirect('/login');
+                })
+                .catch((err)=>{
+                    console.log(err);
+                })
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+})
+web.get('/reset',(req,res,next)=>{
+    res.render('reset',{name:'reset password' , errormessage:req.flash('error')})
+})
+
+web.post('/reset',(req,res,next)=>{
+    crypto.randomBytes(32,(err,buffer)=>{
+        if(err){
+            console.log(err);
+            return res.redirect('/reset');
+        }
+        const token = buffer.toString('hex');
+        User.findOne({where:{email:req.body.email}})
+            .then((user)=>{
+                if(!user){
+                    req.flash('error','No this email');
+                    return res.redirect('/reset');
+                }
+                user.resettoken=token;
+                //user.resettokenexpiration=Date.now()+2880000;
+                return user.save();
+            })
+            .then((result)=>{
+                res.redirect('/login');
+                return transporter.sendMail({
+                    to:req.body.email,
+                    from:'lotus6061830133@g.ncu.edu.tw',
+                    subject:'reset',
+                    html:`
+                        <h4>password reset</h4>
+                        <h4><a href='http://localhost:3000/reset/${token}'>You need to click this link to reset password</a></h4>
+                    `
+                })
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
+    })
+})
 web.get('/login',(req,res,next)=>{
     res.render('login' , {name:'login' , errormessage:req.flash('error')});
 })
@@ -65,6 +165,7 @@ web.post('/login',(req,res,next)=>{
                     if(result){
                         req.session.login=true;
                         req.session.user=user;
+                        req.session.userid=user.id;
                         return req.session.save(()=>{
                             res.redirect('/home');
                         });
@@ -116,7 +217,16 @@ web.post('/signup',(req,res,next)=>{
                 })
                 .then((result)=>{
                     res.redirect('/login');
-                });
+                    return transporter.sendMail({
+                        to:email,
+                        from:'lotus6061830133@g.ncu.edu.tw',
+                        subject:'Success',
+                        html:'<h4>Signup Successfully</h4>'
+                    })
+                })
+                .catch((err)=>{
+                    console.log(err);
+                })
             })
         .catch((err)=>{
             console.log(err);
@@ -126,14 +236,18 @@ web.post('/signup',(req,res,next)=>{
 web.get('/itung',(req,res) =>{
     People.findAll()
         .then((result) =>{
-            res.render('itung' , {name: "itung" , title: result , login:req.session.login});
+            res.render('itung' , {name: "itung" , title: result , login:req.session.login , id:req.session.userid});
         })
         .catch((err) =>{
             console.log(err);
         })
 })
 web.post('/itung',(req,res)=>{
-    People.create(req.body)
+    People.create({
+        userId:req.body.userid,
+        name:req.body.name,
+        talk:req.body.talk
+    })
         .then((result) =>{
             res.redirect('/itung');
         })
@@ -144,7 +258,8 @@ web.post('/itung',(req,res)=>{
 web.post('/reply',(req,res)=>{
     Ask.create({
         personId:req.body.id,
-        reply:req.body.talk
+        reply:req.body.talk,
+        userId:req.session.userid
     })
         .then(() =>{
             if(req.body.name=='李一桐')
@@ -160,10 +275,15 @@ web.post('/reply',(req,res)=>{
             console.log(err);
         })
     })
+
 web.get('/reply/:id',(req,res)=>{
-    const id = req.params.id;
+    replyid = req.params.id;
+    res.redirect('/'+replyid)
+})
+
+web.get('/:id' , (req,res)=>{
     let name1="";
-    People.findByPk(id)
+    People.findByPk(replyid)
         .then((back)=>{
             const name = back.name;
             if(name=='李一桐')
@@ -177,16 +297,29 @@ web.get('/reply/:id',(req,res)=>{
         })
     Ask.findAll()
         .then((result) =>{
-            res.render('reply' ,{name:'reply' , title:result , number:id , name1:name1});
+            res.render('reply' ,{name:"reply" , title:result , number:replyid , name1:name1 , id:req.session.userid});
         })
         .catch((err) =>{
             console.log(err);
         })
-    })
+})
 web.post('/update',(req,res)=>{
     const id = req.body.id;
     const reply = req.body.reply;
     const personId = req.body.personId;
+    let name1="";
+    People.findByPk(personId)
+        .then((back)=>{
+            const name = back.name;
+            if(name=='李一桐')
+            {
+                name1 = 'itung';
+            }
+            else
+            {
+                name1 = 'lusi';
+            }
+        })
     Ask.findByPk(id)
         .then((result) =>{
            result.reply=reply;
@@ -195,7 +328,7 @@ web.post('/update',(req,res)=>{
         .then(()=>{
             Ask.findAll()
                 .then((result)=>{
-                    res.render('reply',{title:result , number:personId});
+                    res.render('reply',{name:"reply",title:result , number:personId,name1:name1 , id:req.session.userid});
                 })    
                 .catch((err)=>{
                     console.log(err);
@@ -207,28 +340,44 @@ web.post('/update',(req,res)=>{
 })
 web.post('/delete/itung',(req,res)=>{
     const id = req.body.id;
-    People.destroy({where:{id:id}})
+    const userid = req.body.userId;
+    if(userid==req.session.userid)
+    {
+        People.destroy({where:{id:id}})
         .then(() =>{
             res.redirect('/itung');
         })
         .catch((err) =>{
             console.log(err);
         })
+    }
+    else
+    {
+        res.redirect('/itung');
+    }
 })
 web.post('/delete/lusi',(req,res)=>{
     const id = req.body.id;
-    People.destroy({where:{id:id}})
-        .then(() =>{
-            res.redirect('/lusi');
-        })
-        .catch((err) =>{
-            console.log(err);
-        })
+    const userid = req.body.userId;
+    if(userid==req.session.userid)
+    {
+        People.destroy({where:{id:id}})
+            .then(() =>{
+                res.redirect('/lusi');
+            })
+            .catch((err) =>{
+                console.log(err);
+            })
+    }
+    else
+    {
+        res.redirect('/lusi');
+    }
 })
 web.get('/lusi',(req,res) =>{
     People.findAll()
         .then((result) =>{
-            res.render('lusi' , {name: "lusi" , title: result , login:req.session.login});
+            res.render('lusi' , {name: "lusi" , title: result , login:req.session.login , id:req.session.userid});
         })
         .catch((err) =>{
             console.log(err);
@@ -236,7 +385,11 @@ web.get('/lusi',(req,res) =>{
 })
 
 web.post('/lusi',(req,res)=>{
-    People.create(req.body)
+    People.create({
+        userId:req.body.userid,
+        name:req.body.name,
+        talk:req.body.talk
+    })
         .then((result) =>{
             res.redirect('/lusi');
         })

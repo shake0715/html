@@ -1,0 +1,2286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>首頁</title>
+    <style type="text/css">
+      .bg .navbar-nav .nav-link{
+        color:white
+      }
+      .bg .title {
+        color:white
+      }
+      .bg{
+          background-color: rgba(0, 0, 255, 0.836);
+      }
+      .dropdown-menu{
+        width: 414px;
+      }
+      .dropdown-menu ul li{
+        border:0px;
+      }
+      .list-group{
+        border-radius: 0px;
+      }
+      .block{
+        background-color:rgb(8, 8, 85);
+      }
+    </style>
+  </head>
+  <body>
+    <% let i=0; %>
+    <% let win ="勝"  %>
+    <% let lost ="敗"  %>
+    <% let string =""  %>
+    <nav class="navbar navbar-expand-lg navbar-dark bg mb-5">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <a class="navbar-brand title" href="/home">
+                <img src="../warrior.jfif" width="60" height="48" class="d-inline-block align-text-center d-none d-lg-inline-block">
+                Warriors
+                </a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold" href='/game' aria-current="page">賽程</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href='/day' aria-current="page">聯盟重要日</a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link fw-bold" href='/team' aria-current="page"> 球隊</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          焦點球星
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href='/name/curry'>Stephen curry</a></li>
+                          <li><a class="dropdown-item" href='/name/klay'>Klay thompson</a></li>
+                          <li><a class="dropdown-item" href='/name/green'>Draymond green</a></li>
+                        </ul>
+                      </li>
+                    <li class="nav-item dropdown d-none d-lg-block">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        球隊
+                        </a>
+                        <ul class="dropdown-menu p-0 text-center">
+                            <li class="list-group-item bg" style='border:0px ; border-radius: 0px ;color:white'>東區</li>
+                            <ul class="list-group list-group-horizontal">
+                                <ul class="list-group">
+                                    <ul class="list-group h-100">
+                                        <li class="list-group-item block" style='color:white'>東南組</li>
+                                        <li class="list-group-item">亞特蘭大 老鷹</li>
+                                        <li class="list-group-item">夏洛特 黄蜂</li>
+                                        <li class="list-group-item">邁阿密 熱火</li>
+                                        <li class="list-group-item">奧蘭多 魔術</li>
+                                        <li class="list-group-item">華盛頓 巫師</li>
+                                    </ul>   
+                                </ul>  
+                                <ul class="list-group">
+                                    <ul class="list-group h-100">
+                                        <li class="list-group-item block" style='color:white'>大西洋組</li>
+                                        <li class="list-group-item">波士頓 塞爾蒂克</li>
+                                        <li class="list-group-item">布魯克林 籃網</li>
+                                        <li class="list-group-item">紐約 尼克</li>
+                                        <li class="list-group-item">費城 76人</li>
+                                        <li class="list-group-item">多倫多 暴龍</li>
+                                    </ul>   
+                                </ul>
+                                <ul class="list-group">
+                                    <ul class="list-group h-100">
+                                        <li class="list-group-item block" style='color:white'>中央組</li>
+                                        <li class="list-group-item">芝加哥 公牛</li>
+                                        <li class="list-group-item">克里夫蘭 騎士</li>
+                                        <li class="list-group-item">底特律 活塞</li>
+                                        <li class="list-group-item">印第安納 溜馬</li>
+                                        <li class="list-group-item">密爾瓦基 公鹿</li>
+                                    </ul>   
+                                </ul>           
+                            </ul>
+                            <li class="list-group-item bg" style='border:0px ; border-radius: 0px ;color:white'>西區</li>
+                            <ul class="list-group list-group-horizontal">
+                                <ul class="list-group">
+                                    <ul class="list-group h-100">
+                                        <li class="list-group-item block" style='color:white'>西南組</li>
+                                        <li class="list-group-item">達拉斯 獨行俠</li>
+                                        <li class="list-group-item">休士頓 火箭</li>
+                                        <li class="list-group-item">曼菲斯 灰熊</li>
+                                        <li class="list-group-item">紐奧良 鵜鶘</li>
+                                        <li class="list-group-item">聖安東尼奧 馬刺</li>
+                                    </ul>   
+                                </ul>  
+                                <ul class="list-group">
+                                    <ul class="list-group h-100">
+                                        <li class="list-group-item block" style='color:white'>西北組</li>
+                                        <li class="list-group-item">丹佛 金塊</li>
+                                        <li class="list-group-item">明尼蘇達 灰狼</li>
+                                        <li class="list-group-item">奧克拉荷馬城 雷霆</li>
+                                        <li class="list-group-item">波特蘭 拓荒者</li>
+                                        <li class="list-group-item">猶他 爵士</li>
+                                    </ul>   
+                                </ul>
+                                <ul class="list-group">
+                                    <ul class="list-group h-100">
+                                        <li class="list-group-item block" style='color:white'>太平洋組</li>
+                                        <li class="list-group-item">金州 勇士</li>
+                                        <li class="list-group-item">洛杉磯 快艇</li>
+                                        <li class="list-group-item">洛杉磯 湖人</li>
+                                        <li class="list-group-item">鳳凰城 太陽</li>
+                                        <li class="list-group-item">沙加緬度 國王</li>
+                                    </ul>   
+                                </ul>           
+                            </ul>
+                        </ul>   
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class='cotainer'>
+        <div class='row'>
+            <div class='col-10 mx-auto'>
+                <table class="table table-borderless mb-0 text-center">
+                    <caption class='fw-bold caption-top' style='background-color:rgba(8, 8, 61, 0.568) ; color:white'>2021-2022 球隊賽程</caption>
+                    <tbody>
+                        <tr style='background-color:rgba(38, 38, 211, 0.568)'>
+                            <th scope="col">日期</th>
+                            <th scope="col">比賽時間</th>
+                            <th scope="col">對手</th>
+                            <th scope="col">結果</th>
+                            <th scope="col">比分</th>
+                            <th scope="col">地點</th>
+                        </tr>
+                        <tr class='fw-bold' style='background-color:rgba(8, 8, 61, 0.568) ; color:white'>
+                            <th colspan="6">10月</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">10月 5日</th>
+                            <th scope="col">10:00</th>
+                            <th scope="col">vs 拓荒者</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">摩達中心球場</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">10月 7日</th>
+                            <th scope="col">10:00</th>
+                            <th scope="col">vs 金塊</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">10月 9日</th>
+                            <th scope="col">10:00</th>
+                            <th scope="col">vs 湖人</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">10月 13日</th>
+                            <th scope="col">10:30</th>
+                            <th scope="col">vs 湖人</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">STAPLES Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">10月 16日</th>
+                            <th scope="col">10:00</th>
+                            <th scope="col">vs 拓荒者</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">10月 20日</th>
+                            <th scope="col">10:00</th>
+                            <th scope="col">vs 湖人</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">STAPLES Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">10月 22日</th>
+                            <th scope="col">10:00</th>
+                            <th scope="col">vs 快艇</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">10月 25日</th>
+                            <th scope="col">9:00</th>
+                            <th scope="col">vs 國王</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">金州第一中心</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">10月 27日</th>
+                            <th scope="col">8:00</th>
+                            <th scope="col">vs 雷霆</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Paycom Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">10月 29日</th>
+                            <th scope="col">10:00</th>
+                            <th scope="col">vs 灰熊</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">10月 31日</th>
+                            <th scope="col">8:30</th>
+                            <th scope="col">vs 雷霆</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr class='fw-bold' style='background-color:rgba(8, 8, 61, 0.568) ; color:white'>
+                            <th colspan="6">11月</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">11月 4日</th>
+                            <th scope="col">10:00</th>
+                            <th scope="col">vs 黃蜂</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">11月 6日</th>
+                            <th scope="col">10:00</th>
+                            <th scope="col">vs  鵜鶘</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">11月 8日</th>
+                            <th scope="col">09:30</th>
+                            <th scope="col">vs 火箭</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">11月 9日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs 老鷹</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">11月 11日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs 灰狼</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">11月 13日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs 公牛</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">11月 15日</th>
+                            <th scope="col">8:00</th>
+                            <th scope="col">vs 黃蜂</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">光譜中心</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">11月 17日</th>
+                            <th scope="col">8:30</th>
+                            <th scope="col">vs 籃網</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">巴克萊中心球場</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">11月 19日</th>
+                            <th scope="col">8:30</th>
+                            <th scope="col">vs 騎士	</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Rocket Mortgage FieldHouse</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">11月 20日</th>
+                            <th scope="col">8:00</th>
+                            <th scope="col">vs 活塞</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Little Caesars Arena</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">11月 22日</th>
+                            <th scope="col">9:30</th>
+                            <th scope="col">vs 暴龍</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">11月 25日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs 76人</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">11月 27日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs 拓荒者</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">11月 29日</th>
+                            <th scope="col">4:30</th>
+                            <th scope="col">vs  快艇</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">STAPLES Center</th>
+                        </tr>
+                        <tr class='fw-bold' style='background-color:rgba(8, 8, 61, 0.568) ; color:white'>
+                            <th colspan="6">12月</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">12月 1日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs 太陽</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Footprint Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">12月 4日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs 太陽</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">12月 5日</th>
+                            <th scope="col">9:30</th>
+                            <th scope="col">vs  馬刺</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">12月 7日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs  魔術</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">12月 9日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs 拓荒者</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">12月 12日</th>
+                            <th scope="col">9:30</th>
+                            <th scope="col">vs 76人</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">富國銀行中心球場</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">12月 14日</th>
+                            <th scope="col">8:00</th>
+                            <th scope="col">vs 溜馬</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Gainbridge Fieldhouse</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">12月 15日</th>
+                            <th scope="col">8:30</th>
+                            <th scope="col">vs 尼克</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">麥迪遜廣場花園球場</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">12月 18日</th>
+                            <th scope="col">8:30</th>
+                            <th scope="col">vs 塞爾蒂克</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">TD花園球場</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">12月 19日</th>
+                            <th scope="col">8:30</th>
+                            <th scope="col">vs  暴龍</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Scotiabank Arena</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">12月 21日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs  國王</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">12月 24日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs 灰熊</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">12月 26日</th>
+                            <th scope="col">6:00</th>
+                            <th scope="col">vs 太陽</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Footprint Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">12月 31日</th>
+                            <th scope="col">10:30</th>
+                            <th scope="col">vs  金塊</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Ball Arena</th>
+                        </tr>
+                        <tr class='fw-bold' style='background-color:rgba(8, 8, 61, 0.568) ; color:white'>
+                            <th colspan="6">1月</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1月 2日</th>
+                            <th scope="col">10:00</th>
+                            <th scope="col">vs 爵士</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Vivint Arena</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1月 4日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs 熱火</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1月 6日</th>
+                            <th scope="col">8:30</th>
+                            <th scope="col">vs  獨行俠</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">美國航空中心</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1月 7日</th>
+                            <th scope="col">9:00</th>
+                            <th scope="col">vs  鵜鶘</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">冰沙國王中心</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1月 10日</th>
+                            <th scope="col">9:30</th>
+                            <th scope="col">vs 騎士</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1月 12日</th>
+                            <th scope="col">9:00</th>
+                            <th scope="col">vs 灰熊</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">聯邦快遞球場</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1月 14日</th>
+                            <th scope="col">8:30</th>
+                            <th scope="col">vs 公鹿</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Fiserv Forum</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1月 15日</th>
+                            <th scope="col">9:00</th>
+                            <th scope="col">vs 公牛</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">麥迪遜廣場花園球場</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1月 17日</th>
+                            <th scope="col">9:00</th>
+                            <th scope="col">vs  灰狼</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">標靶中心球場</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1月 19日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs  活塞</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1月 21日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs  溜馬</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1月 22日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs 火箭</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1月 24日</th>
+                            <th scope="col">9:30</th>
+                            <th scope="col">vs 爵士</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1月 26日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs 獨行俠</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1月 28日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs  灰狼</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">1月 30日</th>
+                            <th scope="col">9:30</th>
+                            <th scope="col">vs  籃網</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr class='fw-bold' style='background-color:rgba(8, 8, 61, 0.568) ; color:white'>
+                            <th colspan="6">2月</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">2月 1日</th>
+                            <th scope="col">9:00</th>
+                            <th scope="col">vs 火箭</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">豐田中心</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">2月 2日</th>
+                            <th scope="col">9:30</th>
+                            <th scope="col">vs 馬刺</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">AT&T中心</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">2月 4日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs  國王</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">2月 8日</th>
+                            <th scope="col">9:00</th>
+                            <th scope="col">vs  雷霆</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Paycom Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">2月 10日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs 爵士</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Vivint Arena</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">2月 11日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs 尼克</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">2月 13日</th>
+                            <th scope="col">9:30</th>
+                            <th scope="col">vs 湖人</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">2月 15日</th>
+                            <th scope="col">11:30</th>
+                            <th scope="col">vs 快艇</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">STAPLES Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">2月 17日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs  金塊</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">2月 25日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs 拓荒者</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">摩達中心球場</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">2月 28日</th>
+                            <th scope="col">8:30</th>
+                            <th scope="col">vs  獨行俠</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr class='fw-bold' style='background-color:rgba(8, 8, 61, 0.568) ; color:white'>
+                            <th colspan="6">3月</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">3月 2日</th>
+                            <th scope="col">9:00</th>
+                            <th scope="col">vs 灰狼</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">標靶中心球場</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">3月 4日</th>
+                            <th scope="col">9:30</th>
+                            <th scope="col">vs 獨行俠</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">美國航空中心</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">3月 6日</th>
+                            <th scope="col">9:30</th>
+                            <th scope="col">vs  湖人</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">STAPLES Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">3月 8日</th>
+                            <th scope="col">10:00</th>
+                            <th scope="col">vs  金塊</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Ball Arena</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">3月 9日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs  快艇</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">3月 11日</th>
+                            <th scope="col">11:00</th>
+                            <th scope="col">vs 金塊</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Ball Arena</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">3月 13日</th>
+                            <th scope="col">9:30</th>
+                            <th scope="col">vs 公鹿</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">3月 15日</th>
+                            <th scope="col">10:00</th>
+                            <th scope="col">vs 巫師</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">3月 17日</th>
+                            <th scope="col">10:00</th>
+                            <th scope="col">vs  塞爾蒂克</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">3月 21日</th>
+                            <th scope="col">8:30</th>
+                            <th scope="col">vs  馬刺</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">3月 23日</th>
+                            <th scope="col">7:00</th>
+                            <th scope="col">vs  魔術</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">安麗中心球場</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">3月 24日</th>
+                            <th scope="col">7:30</th>
+                            <th scope="col">vs  熱火</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">FTX Arena</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">3月 26日</th>
+                            <th scope="col">7:30</th>
+                            <th scope="col">vs 老鷹</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">國家農業球場</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">3月 28日</th>
+                            <th scope="col">6:00</th>
+                            <th scope="col">vs 巫師</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Capital One Arena</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">3月 29日</th>
+                            <th scope="col">8:00</th>
+                            <th scope="col">vs 灰熊</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">聯邦快遞球場</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">3月 31日</th>
+                            <th scope="col">10:00</th>
+                            <th scope="col">vs  太陽</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr class='fw-bold' style='background-color:rgba(8, 8, 61, 0.568) ; color:white'>
+                            <th colspan="6">4月</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">4月 3日</th>
+                            <th scope="col">8:30</th>
+                            <th scope="col">vs 爵士</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">4月 4日</th>
+                            <th scope="col">9:00</th>
+                            <th scope="col">vs 國王</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">金州第一中心</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">4月 8日</th>
+                            <th scope="col">10:00</th>
+                            <th scope="col">vs  湖人</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">Chase Center</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">4月 10日</th>
+                            <th scope="col">TBD</th>
+                            <th scope="col">vs  馬刺</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <% i+=2 %>
+                            <th scope="col">AT&T中心</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">4月 11日</th>
+                            <th scope="col">TBD</th>
+                            <th scope="col">vs  鵜鶘</th>
+                            <% if(score[i]>score[i+1]){ %>
+                                <% string = win %>
+                            <% }else if(score[i]==score[i+1]){ %>
+                                <% string = "-" %>
+                            <% }else{ %>
+                                <% string = lost %>
+                            <% } %>
+                            <th scope="col"><%= string %></th>
+                            <th scope="col">
+                                <% if(string==win){ %>
+                                    <span style="color:red"><%= score[i] %></span>
+                                    <span>-<%= score[i+1] %></span>
+                                <% }else{ %>
+                                    <span><%= score[i] %></span>
+                                    <span style="color:red">-<%= score[i+1] %></span>
+                                <% } %>
+                            </th>
+                            <th scope="col">冰沙國王中心</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

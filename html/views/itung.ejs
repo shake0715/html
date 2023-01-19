@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <%- include('partial/head.ejs') %>
-<body background="11.jfif"> 
+<body> 
     <h3 style="font-size:30px"> <a href="https://weibo.com/u/5372556014?refer_flag=0000015012_&from=feed&loc=nickname">李一桐 </a></a></h3>
     <ul style="position:absolute ; right:0px ; top:0px ; display:inline">
         <li style="display:inline"><a href="/home">搜尋頁面</a></li>
@@ -80,6 +80,7 @@
             <input type="hidden" value="李一桐" name="name">
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <h5>請輸入你想說的話:</h5>
+            <input type="hidden" name="userid" value="<%= id %>">
             <input type="text" name="talk" placeholder="你的留言">
             <button type="submit">Submit</button>
             <h5>討論區:</h5>
@@ -94,6 +95,7 @@
                         <span><a href='./reply/<%= blog.id %>'><%= str %><%= i %></a></span>
                         <input type="hidden" value="<%= blog.id %>" name="id">
                         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <input type="hidden" value="<%= blog.userId %>" name="userId">
                         <button style="color:blue ; border:0px ; background-color:none" ; type='submit'>delete</button>
                         <span class='talk'><%= blog.talk %></span>
                     </form>

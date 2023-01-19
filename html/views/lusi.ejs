@@ -77,6 +77,7 @@
             <input type="hidden" value="趙露思" name="name">
             <h5>請輸入你想說的話:</h5>
             <input type="text" name="talk" placeholder="你的留言">
+            <input type="hidden" name="userid" value="<%= id %>">
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <button type="submit">Submit</button>
             <h5>討論區:</h5>
@@ -91,6 +92,7 @@
                             <span><a href='./reply/<%= blog.id %>'><%= str %><%= i %></a></span>
                             <input type="hidden" value="<%= blog.id %>" name="id">
                             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                            <input type="hidden" value="<%= blog.userId %>" name="userId">
                             <button style="color:blue ; border:0px ; background-color:none" ; type='submit'>delete</button>
                             <span class='talk'><%= blog.talk %></span>
                         </form>

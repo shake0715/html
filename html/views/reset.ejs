@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<%- include('partial/head.ejs') %>
+<body background="11.jfif">
+    <div class='login' ; style='width:300px ; height:400px'>
+        <form action="/reset" method="post">
+            <p style="margin-left:100px">Email:</p>
+            <input style="margin-left:25px ; width:250px" type='text' name='email'>
+            <hr/>
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <button class="submit" ; type='submit'>reset</button>
+            <% if(errormessage){ %>
+                <p class="keyword"><%= errormessage %></p>
+            <% } %>
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>泡麵網</title>
+    <style type='text/css'>
+        .img{
+            height: 250px;
+        }
+        .card-img-top{
+            width: 156px;
+            height: 200px;
+        }
+        .a{
+          color:black;
+          text-decoration:none;
+        }
+        .bg-primary .navbar-nav .nav-link{
+          color:white
+        }
+    </style>
+  </head>
+  
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top bg-primary">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    統一
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/mh">滿漢大餐</a></li>
+                  <li><a class="dropdown-item" href="/lik">來一客</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/YQ">阿Q桶麵</a></li>
+                  <li><a class="dropdown-item" href="/ti">統一麵</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    來一客
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">鮮蝦魚板風味</a></li>
+                  <li><a class="dropdown-item" href="#">韓式泡菜風味</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">京燉肉骨風味</a></li>
+                  <li><a class="dropdown-item" href="#">肉燥菠菜風味</a></li>
+                  <li><a class="dropdown-item" href="#">牛肉蔬菜風味</a></li>
+                  <li><a class="dropdown-item" href="#">川辣牛肉風味</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    大乾麵
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">紅油擔擔麵</a></li>
+                  <li><a class="dropdown-item" href="#">地獄辣椒麵</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">大乾麵花椒麻醬風味麵</a></li>
+                  <li><a class="dropdown-item" href="#">蔥燒牛肉風味麵</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <div class='container mb-5'>
+        <div class='row'>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">首頁</a></li>
+                <li class="breadcrumb-item active" aria-current="page">統一</li>
+            </ol>
+        </div>
+    </div>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-9 mx-auto img mb-3'>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="../lik.jfif" class="d-block w-100 img">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../mh.jfif" class="d-block w-100 img">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../ti.jfif" class="d-block w-100 img">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../YQ.jfif" class="d-block w-100 img">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class='container'>
+        <div class='row'>
+            <div class='col-9 mx-auto'>
+              <img src="../ti0.png" class="w-100 mb-2">
+              <h4>統一麵</h4>
+              <p>窗外綠油油的稻田緩緩掠過，火車車廂內旅人掀開了統一麵碗蓋，漫出濃郁撲鼻的香味，勾起鄰座的遐想，彷彿回到那段的青澀歲月。
+                  1970年，統一企業推出附粉包可乾泡兩吃的統一(脆)麵，但一直無法與市場龍頭匹敵；時任統一企業總經理高清愿與研發團隊苦思如何創造出口味獨樹一格的速食麵，便以台南傳統麵食為發想，於1971年研發團隊開發出「統一麵」，以附加獨特肉燥風味油包，並且推出速食麵電視廣告，上市後果真一鳴驚人，也主導台灣往後數十年速食麵市場。
+                  經過40餘年的發展，統一麵已是家喻戶曉、人人喜愛的品牌，令人念念不忘的好味道，總是陪伴我們走過人生每個階段。統一麵品牌除了香氣難忘的統一麵肉燥風味外，還有道地濃郁微微辛辣的統一麵蔥燒牛肉風味、數種香料調配出香氣四溢的統一麵肉骨茶風味、湯頭鮮美清爽的統一麵鮮蝦風味，統一麵這份熟悉的美味總教人回味再三。
+              </p>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+    
+  </body>
+</html>

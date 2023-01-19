@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>泡麵網</title>
+    <style type='text/css'>
+      .card-img-top{
+          width: 156px;
+          height: 200px;
+      }
+      .bg-primary .navbar-nav .nav-link{
+        color:white
+      }
+      .a{
+        color:black;
+        text-decoration:none;
+      }
+      .pic{
+        overflow: hidden;
+      }
+      .pic img:hover{
+        transform:scale(1.05,1.05);
+        transition: all 0.3s ease-out;
+      }
+      .btn{
+        border:none;
+      }
+    </style>
+  </head>
+  
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top bg-primary">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    統一
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/mh">滿漢大餐</a></li>
+                  <li><a class="dropdown-item" href="/lik">來一客</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/YQ">阿Q桶麵</a></li>
+                  <li><a class="dropdown-item" href="/ti">統一麵</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    來一客
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">鮮蝦魚板風味</a></li>
+                  <li><a class="dropdown-item" href="#">韓式泡菜風味</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">京燉肉骨風味</a></li>
+                  <li><a class="dropdown-item" href="#">肉燥菠菜風味</a></li>
+                  <li><a class="dropdown-item" href="#">牛肉蔬菜風味</a></li>
+                  <li><a class="dropdown-item" href="#">川辣牛肉風味</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    大乾麵
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">紅油擔擔麵</a></li>
+                  <li><a class="dropdown-item" href="#">地獄辣椒麵</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">大乾麵花椒麻醬風味麵</a></li>
+                  <li><a class="dropdown-item" href="#">蔥燒牛肉風味麵</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <div class='container mb-5'>
+        <div class='row'>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">首頁</a></li>
+              <li class="breadcrumb-item"><a href="/first-ti">統一</a></li>
+              <li class="breadcrumb-item active" aria-current="page">滿漢大餐</li>
+            </ol>
+        </div>
+    </div>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-12 col-md-3'>
+          <button class="btn  d-inline-flex rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+            品牌列表
+          </button>
+          <div class="collapse" id="collapseExample1">
+            <div>
+              <button class="btn  d-inline-flex rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+              統一
+              </button>
+              <ul>
+                <div class="collapse" id="collapseExample2">
+                  <div><a class='a' href="/mh">滿漢大餐</a></div>
+                  <div><a class='a' href="/lik">來一客</a></div>
+                  <div><a class='a' href="/YQ">阿Q桶麵</a></div>
+                  <div><a class='a' href="/ti">統一麵</a></div>
+                </div>
+              </ul>
+            </div>
+            <div>
+              <button class="btn  d-inline-flex rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+              維力
+              </button>
+              <ul>
+                <div class="collapse" id="collapseExample3">
+                  <div><a class='a' href="/mh">一度贊</a></div>
+                  <div><a class='a' href="/mh">大乾麵</a></div>
+                  <div><a class='a' href="/mh">手打麵</a></div>
+                </div>
+              </ul>
+            </div>
+            <div>
+              <button class="btn  d-inline-flex rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
+              味丹
+              </button>
+              <ul>
+                <div class="collapse" id="collapseExample4">
+                  <div><a class='a' href="/mh">味味A排骨雞麵</a></div>
+                  <div><a class='a' href="/mh">雙響泡</a></div>
+                  <div><a class='a' href="/mh">味味一品</a></div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class='col-12 col-md-9'>
+          <div class='row row-cols-1 row-cols-md-3 row-cols-lg-4'>
+            <div class='col mb-5'>
+              <div class='card text-center h-100'>
+                <div class='pic'>
+                  <img src="../mh1.jfif" class="card-img-top w-100">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">蔥燒牛肉麵碗裝</h5>
+                  <h4 style='color:red'>價格:53元</h4>
+                  <p class="card-text">直火爆炒逼出青蔥香，依序拌炒川味豆瓣及香辛料，融合出濃郁中帶點嗆辣的口感。嚐一口醇厚，蔥香撲鼻，肉湯甜美，享受微辣尾韻! ! </p>
+                </div>
+                <div class="card-footer">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    詳情
+                  </button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">產品詳情</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <img src="../mh5.jpg" class=" w-100">
+                          <table class="table text-start">
+                            <tbody>
+                              <tr>
+                                <td>產地</td>
+                                <td>台灣</td>
+                              </tr>
+                              <tr>
+                                <td>口味</td>
+                                <td>牛肉</td>
+                              </tr>
+                              <tr>
+                                <td>商品規格</td>
+                                <td>內容物名稱(成分)：<br/>
+                                  麵：麵粉、精製棕櫚油(棕櫚油、抗氧化劑混合濃縮生育醇)、粘稠劑(醋酸澱粉、海藻酸鈉)、水、乳化油(甘油、精製大豆油、水、脂肪酸聚合甘油酯、大豆卵磷脂)、食鹽、小麥蛋白、品質改良用劑(碳酸鉀、多磷酸鈉、無水碳酸鈉)、蛋白粉、複方β-胡蘿蔔素(甘油、中鏈三酸甘油酯、水、脂肪酸聚合甘油酯、抗氧化劑維生素E、β-胡蘿蔔素)、抗氧化劑混合濃縮生育醇(含精製芥花油)。<br/>
+                                  <br/>調味粉包：食鹽、味精、葡萄糖、牛肉風味粉〔麥芽糊精、食鹽、醬油粉、棕櫚油、調味劑(味精、5'-次黃嘌呤核磷酸二鈉、5'-鳥嘌呤核磷酸二鈉、琥珀酸二鈉、DL-胺基丙酸、胺基乙酸)、牛抽出物、菜籽油、醬油、葡萄糖、D-木糖、香料〕、焦糖色素、蔗糖、醬油粉(醬油、麥芽糊精、食鹽、氧化澱粉、小麥蛋白質水解物、焦糖色素、檸檬酸、5'-次黃嘌呤核磷酸二鈉、5'-鳥嘌呤核磷酸二鈉)、酵母抽出粉(酵母抽出物、食鹽、葵花油)、脫水青蔥、複方香料粉(香料、味精、乳糖、食鹽、5'-次黃嘌呤核磷酸二鈉、5'-鳥嘌呤核磷酸二鈉)、調味劑(5'-次黃嘌呤核磷酸二鈉、5'-鳥嘌呤核磷酸二鈉、琥珀酸二鈉、胺基乙酸)、胡椒粉、辣椒粉、洋蔥粉、花椒粉、磷酸鈣、蒜粉、柴魚粉、八角粉、薑粉、麥芽糊精。<br/>
+                                  <br/>調味油包：辣豆瓣醬(辣椒、大豆、食鹽、水、米)、精製豬油〔豬油(西班牙)、抗氧化劑混合濃縮生育醇〕、精製牛油(牛油、抗氧化劑混合濃縮生育醇)、沙茶醬(精製芥花油、魚乾、蒜、薑粉、椰子粉、蔥乾、芝麻、赤尾青、辣椒粉、食鹽、胡荽、肉桂、茴香、胡椒粉)、牛脂、紅椒色素(精製芥花油、紅椒抽出物)、辣椒抽出物(辣椒、精製大豆油)。<br/>
+                                  <br/>料理包：水、牛肉(澳洲、紐西蘭、巴拉圭)、醬油、精製棕櫚油(棕櫚油、抗氧化劑混合濃縮生育醇)、辣豆瓣醬(辣椒、大豆、食鹽、水、米)、樹薯澱粉、料理米酒、青蔥、蒜、花椒、薑、胡椒粉、八角。(固形量25公克，內容量100公克)
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="btn btn-primary">購買</a>
+                </div>
+              </div>
+            </div>
+            <div class='col mb-5'>
+              <div class="card text-center h-100">
+                <div class='pic'>
+                  <img src="../mh2.jfif" class="card-img-top w-100">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">珍味牛肉麵碗裝</h5>
+                  <h4 style='color:red'>價格:53元</h4>
+                  <p class="card-text">保留傳奇廚師開發的經典台式紅燒味，結合牛油、牛肉原湯與嚴選醬油燉煮提味，濃厚中盡顯牛肉鮮美湯頭 !</p>
+                </div>
+                <div class="card-footer">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    詳情
+                  </button>
+                  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">產品詳情</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <img src="../mh6.jpg" class=" w-100">
+                          <table class="table text-start">
+                            <tbody>
+                              <tr>
+                                <td>產地</td>
+                                <td>台灣</td>
+                              </tr>
+                              <tr>
+                                <td>口味</td>
+                                <td>牛肉</td>
+                              </tr>
+                              <tr>
+                                <td>商品規格</td>
+                                <td>內容物名稱(成分)：<br/>
+                                  麵：麵粉、精製棕櫚油(棕櫚油、抗氧化劑混合濃縮生育醇)、粘稠劑(醋酸澱粉、海藻酸鈉)、水、乳化油(甘油、精製大豆油、水、脂肪酸聚合甘油酯、大豆卵磷脂)、食鹽、小麥蛋白、品質改良用劑(碳酸鉀、多磷酸鈉、無水碳酸鈉)、蛋白粉、複方β-胡蘿蔔素(甘油、中鏈三酸甘油酯、水、脂肪酸聚合甘油酯、抗氧化劑維生素E、β-胡蘿蔔素)、抗氧化劑混合濃縮生育醇(含精製芥花油)。<br/>
+                                  <br/>調味粉包：食鹽、葡萄糖、味精、香料、牛肉風味粉〔麥芽糊精、食鹽、醬油粉、棕櫚油、調味劑(味精、5'-次黃嘌呤核磷酸二鈉、5'-鳥嘌呤核磷酸二鈉、琥珀酸二鈉、DL-胺基丙酸、胺基乙酸)、牛抽出物、菜籽油、醬油、葡萄糖、D-木糖、香料〕、焦糖色素、蔗糖、脫水青蔥、魚類蛋白質水解物、調味劑(5'-次黃嘌呤核磷酸二鈉、5'-鳥嘌呤核磷酸二鈉、胺基乙酸、琥珀酸二鈉)、蒜粉、辣椒粉、胡椒粉、花椒粉、洋蔥粉、八角粉、薑粉、酵母抽出粉(酵母抽出物、食鹽、葵花油)、麥芽糊精。<br/>
+                                  <br/>調味油包：精製牛油(牛油、抗氧化劑混合濃縮生育醇)、精製棕櫚油(棕櫚油、抗氧化劑混合濃縮生育醇)、香料(含椰子油)、紅椒色素(精製芥花油、紅椒抽出物)、辣椒抽出物(辣椒、精製大豆油)。<br/>
+                                  <br/>料理包：料理包：水、牛肉(澳洲、紐西蘭、巴拉圭)、醬油、精製棕櫚油(棕櫚油、抗氧化劑混合濃縮生育醇)、辣豆瓣醬(辣椒、大豆、食鹽、水、米)、樹薯澱粉、料理米酒、青蔥、蒜、花椒、薑、胡椒粉、八角。(固形量25公克，內容量100公克)
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="btn btn-primary">購買</a>
+                </div>
+              </div>
+            </div>
+            <div class='col mb-5'>
+              <div class="card text-center h-100">
+                <div class='pic'>
+                  <img src="../mh3.jfif" class="card-img-top w-100">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">蔥燒豬肉麵碗裝</h5>
+                  <h4 style='color:red'>價格:53元</h4>
+                  <p class="card-text">豬骨熬煮濃郁高湯，搭配豆瓣川辣甜香，輔以直火爆香過的青蔥共同燉煮，使肉塊更添風味，湯頭微辣正好 !</p>
+                </div>
+                <div class="card-footer">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    詳情
+                  </button>
+                  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">產品詳情</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <img src="../mh7.jpg" class=" w-100">
+                          <table class="table text-start">
+                            <tbody>
+                              <tr>
+                                <td>產地</td>
+                                <td>台灣</td>
+                              </tr>
+                              <tr>
+                                <td>口味</td>
+                                <td>豬肉</td>
+                              </tr>
+                              <tr>
+                                <td>商品規格</td>
+                                <td>內容物名稱(成分)：<br/>
+                                  麵：麵粉、精製棕櫚油(棕櫚油、抗氧化劑混合濃縮生育醇)、粘稠劑(醋酸澱粉、海藻酸鈉)、水、乳化油(甘油、精製大豆油、水、脂肪酸聚合甘油酯、大豆卵磷脂)、食鹽、小麥蛋白、品質改良用劑(碳酸鉀、多磷酸鈉、無水碳酸鈉)、蛋白粉、複方β-胡蘿蔔素(甘油、中鏈三酸甘油酯、水、脂肪酸聚合甘油酯、抗氧化劑維生素E、β-胡蘿蔔素)、抗氧化劑混合濃縮生育醇(含精製芥花油)。<br/>
+                                  <br/>調味粉包：味精、食鹽、豬肉風味粉〔麥芽糊精、蛋白質水解物(大豆、玉米、小麥)、食鹽、豬抽出物、精製芥花油、酵母抽出物、洋蔥抽出粉、香料、D-木糖〕、氯化鉀、酵母抽出粉(酵母抽出物、食鹽、葵花油)、洋蔥粉、脫水青蔥、焦糖色素、小茴香粉、葡萄糖、蒜粉、香料、脫水辣椒、麥芽糊精、胡椒粉、辣椒粉、八角粉、花椒粉、5'-次黃嘌呤核磷酸二鈉、5'-鳥嘌呤核磷酸二鈉、磷酸鈣。<br/>
+                                  <br/>調味油包：精製豬油〔豬油(西班牙)、抗氧化劑混合濃縮生育醇〕、辣豆瓣醬(辣椒、大豆、食鹽、水、米)、豬脂(臺灣)、青蔥、醬油、蒜、沙茶醬(精製芥花油、魚乾、蒜、薑粉、椰子粉、蔥乾、芝麻、赤尾青、辣椒粉、食鹽、胡荽、肉桂、茴香、胡椒粉)、芝麻油、複方香料(香料、焦糖色素、味精、5'-次黃嘌呤核磷酸二鈉、5'-鳥嘌呤核磷酸二鈉)。<br/>
+                                  <br/>料理包：水、豬肉(臺灣)、青蔥、精製豬油〔豬油(西班牙)、抗氧化劑混合濃縮生育醇〕、辣豆瓣醬(辣椒、大豆、食鹽、水、米)、醬油、豆瓣醬(水、大豆、食鹽、麵粉、八角粉)、料理米酒、樹薯澱粉、蒜、薑、蔗糖、花椒粉、八角粉、小茴香粉、油桂粉。(固形量25公克，內容量100公克)
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="btn btn-primary">購買</a>
+                </div>
+              </div>
+            </div>
+            <div class='col mb-5'>
+              <div class="card text-center h-100">
+                <div class='pic'>
+                  <img src="../mh4.jfif" class="card-img-top w-100">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">麻辣鍋牛肉麵</h5>
+                  <h4 style='color:red'>價格:53元</h4>
+                  <p class="card-text">麻辣鍋精華湯底，以濃厚的牛肉原湯與酒釀的甘甜味感相互調和，拉扯出嗆麻香辣、鮮美回甘的濃郁滋味 ! </p>
+                </div>
+                <div class="card-footer">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                    詳情
+                  </button>
+                  <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">產品詳情</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <img src="../mh8.jpg" class=" w-100">
+                          <table class="table text-start">
+                            <tbody>
+                              <tr>
+                                <td>產地</td>
+                                <td>台灣</td>
+                              </tr>
+                              <tr>
+                                <td>口味</td>
+                                <td>牛肉  辣</td>
+                              </tr>
+                              <tr>
+                                <td>商品規格</td>
+                                <td>內容物名稱(成分)：<br/>
+                                  麵：麵粉、精製棕櫚油(棕櫚油、抗氧化劑混合濃縮生育醇)、粘稠劑(醋酸澱粉、海藻酸鈉)、水、乳化油(甘油、精製大豆油、水、脂肪酸聚合甘油酯、大豆卵磷脂)、食鹽、小麥蛋白、品質改良用劑(碳酸鉀、多磷酸鈉、無水碳酸鈉)、蛋白粉、複方β-胡蘿蔔素(甘油、中鏈三酸甘油酯、水、脂肪酸聚合甘油酯、抗氧化劑維生素E、β-胡蘿蔔素)、抗氧化劑混合濃縮生育醇(含精製芥花油)。<br/>
+                                  <br/>調味粉包：食鹽、味精、蔗糖、牛肉風味粉〔麥芽糊精、食鹽、醬油粉、棕櫚油、調味劑(味精、5'-次黃嘌呤核磷酸二鈉、5'-鳥嘌呤核磷酸二鈉、琥珀酸二鈉、DL-胺基丙酸、胺基乙酸)、牛抽出物、菜籽油、醬油、葡萄糖、D-木糖、香料〕、花椒粉、氯化鉀、辣椒粉、酵母抽出粉(酵母抽出物、食鹽、葵花油)、葡萄糖、魚類蛋白質水解物、脫水青蔥、脫水辣椒、焦糖色素、蒜粉、香料、調味劑(5'-次黃嘌呤核磷酸二鈉、5'-鳥嘌呤核磷酸二鈉、琥珀酸二鈉)、玉米糖膠、八角粉、磷酸鈣、酵母抽出粉(酵母抽出物、麥芽糊精)。<br/>
+                                  <br/>調味油包：精製棕櫚油(棕櫚油、抗氧化劑混合濃縮生育醇)、精製豬油〔豬油(西班牙)、抗氧化劑混合濃縮生育醇〕、辣豆瓣醬(辣椒、大豆、食鹽、水、米)、酒釀(糯米、水)、薑、蒜、花椒、辣椒抽出物(辣椒、精製大豆油)、紅椒色素(精製芥花油、紅椒抽出物)。<br/>
+                                  <br/>料理包：水、牛肉(澳洲、紐西蘭、巴拉圭)、精製棕櫚油(棕櫚油、抗氧化劑混合濃縮生育醇)、樹薯澱粉、青蔥、辣豆瓣醬(辣椒、大豆
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" class="btn btn-primary">購買</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>      
+      </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+    
+  </body>
+</html>

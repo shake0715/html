@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script>
+      function find(number,bol){
+        if(bol.getAttribute('name')=="false"){
+          bol.setAttribute('name',"true");
+          var name = document.getElementById("name"+number)
+          name.style.opacity=1.0;
+          name.style.color="rgb(8, 8, 85)";
+          name.style.fontSize="24px";
+          name.style.fontFamily="cursive"
+          name.classList.toggle("hide");
+          window.setTimeout(function(){
+            name.style.opacity=0;
+          },3000)
+          window.setTimeout(function(){
+            name.classList.toggle("hide");
+            bol.setAttribute('name',"false");
+            //document.addEventListener('click',click)
+            //alert("4")
+          },4000)
+        }
+        else{
+          //bol.setAttribute('name',"false");
+          return bol;
+        }
+        
+      }
+    </script>
+    <title>首頁</title>
+    <style type="text/css">
+      .bg .navbar-nav .nav-link{
+        color:white
+      }
+      .bg .title {
+        color:white
+      }
+      .bg{
+        background-color: rgba(0, 0, 255, 0.836);
+      }
+      .back{
+        background-color: rgba(128, 128, 128, 0.281);
+      }
+      .inside{
+        background-color: white;
+      }
+      .dropdown-menu ul li{
+        border:0px;
+      }
+      .list-group{
+        border-radius: 0px;
+      }
+      .block{
+        background-color:rgb(8, 8, 85);
+      }
+      .hide{
+        display:none;
+      } 
+      .change{
+        opacity: 1.0;
+        transition: opacity 1s;
+      }
+      .card-body img:hover{
+        transform: scale(1.05,1.05);
+        transition:all 0.3s ease-out ;
+      }
+      #move{
+        position:relative;
+        animation:textmove 2s ;
+        -moz-animation:textmove 2s; /*FireFox*/
+        -webkit-animation:textmove 2s; /*Chrome, Safari*/
+        animation-fill-mode :forwards
+      }
+      #move1-s{
+        position:relative;
+        animation:textmove1 2s ;
+        -moz-animation:textmove1 2s; /*FireFox*/
+        -webkit-animation:textmove1 2s; /*Chrome, Safari*/
+        animation-fill-mode :forwards
+      }
+      #move2{
+        position:relative;
+        animation:textmove2 2s ;
+        -moz-animation:textmove2 2s; /*FireFox*/
+        -webkit-animation:textmove2 2s; /*Chrome, Safari*/
+        animation-fill-mode :forwards
+      }
+      #move3{
+        position:relative;
+        animation:textmove3 2s ;
+        -moz-animation:textmove3 2s; /*FireFox*/
+        -webkit-animation:textmove3 2s; /*Chrome, Safari*/
+        animation-fill-mode :forwards
+      }
+      @keyframes textmove1{
+        from {left: -15%;}
+        to {left:0%;}
+      }
+      @keyframes textmove{
+        from {margin-top: -120%;}
+        to {margin-top: 0%;}
+      }
+      @keyframes textmove2{
+        from {left:-100% ;margin-top: -120%;}
+        to {left:0% ;margin-top: 0%;}
+      }
+      @keyframes textmove3{
+        from {left:-200% ;margin-top: -120%;}
+        to {left:0% ;margin-top: 0%;}
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <a class="navbar-brand title" href="/home">
+            <img src="../warrior.jfif" width="60" height="48" class="d-inline-block align-text-center d-none d-lg-inline-block">
+            Warriors
+          </a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active fw-bold" href='/game' aria-current="page">賽程</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fw-bold" href='/day' aria-current="page">聯盟重要日</a>
+            </li>
+            <li class="nav-item d-lg-none">
+              <a class="nav-link fw-bold" href='/team' aria-current="page"> 球隊</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                焦點球星
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href='/name/curry'>Stephen curry</a></li>
+                <li><a class="dropdown-item" href='/name/klay'>Klay thompson</a></li>
+                <li><a class="dropdown-item" href='/name/green'>Draymond green</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown d-none d-lg-block">
+              <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              球隊
+              </a>
+              <ul class="dropdown-menu p-0 text-center" style='width: 414px;'>
+                <li class="list-group-item bg" style='border:0px ; border-radius: 0px ;color:white'>東區</li>
+                <ul class="list-group list-group-horizontal">
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>東南組</li>
+                      <li class="list-group-item">亞特蘭大 老鷹</li>
+                      <li class="list-group-item">夏洛特 黄蜂</li>
+                      <li class="list-group-item">邁阿密 熱火</li>
+                      <li class="list-group-item">奧蘭多 魔術</li>
+                      <li class="list-group-item">華盛頓 巫師</li>
+                    </ul>   
+                  </ul>  
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>大西洋組</li>
+                      <li class="list-group-item">波士頓 塞爾蒂克</li>
+                      <li class="list-group-item">布魯克林 籃網</li>
+                      <li class="list-group-item">紐約 尼克</li>
+                      <li class="list-group-item">費城 76人</li>
+                      <li class="list-group-item">多倫多 暴龍</li>
+                    </ul>   
+                  </ul>
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>中央組</li>
+                      <li class="list-group-item">芝加哥 公牛</li>
+                      <li class="list-group-item">克里夫蘭 騎士</li>
+                      <li class="list-group-item">底特律 活塞</li>
+                      <li class="list-group-item">印第安納 溜馬</li>
+                      <li class="list-group-item">密爾瓦基 公鹿</li>
+                    </ul>   
+                  </ul>           
+                </ul>
+                <li class="list-group-item bg" style='border:0px ; border-radius: 0px ;color:white'>西區</li>
+                <ul class="list-group list-group-horizontal">
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>西南組</li>
+                      <li class="list-group-item">達拉斯 獨行俠</li>
+                      <li class="list-group-item">休士頓 火箭</li>
+                      <li class="list-group-item">曼菲斯 灰熊</li>
+                      <li class="list-group-item">紐奧良 鵜鶘</li>
+                      <li class="list-group-item">聖安東尼奧 馬刺</li>
+                    </ul>   
+                  </ul>  
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>西北組</li>
+                      <li class="list-group-item">丹佛 金塊</li>
+                      <li class="list-group-item">明尼蘇達 灰狼</li>
+                      <li class="list-group-item">奧克拉荷馬城 雷霆</li>
+                      <li class="list-group-item">波特蘭 拓荒者</li>
+                      <li class="list-group-item">猶他 爵士</li>
+                    </ul>   
+                  </ul>
+                  <ul class="list-group">
+                    <ul class="list-group h-100">
+                      <li class="list-group-item block" style='color:white'>太平洋組</li>
+                      <li class="list-group-item">金州 勇士</li>
+                      <li class="list-group-item">洛杉磯 快艇</li>
+                      <li class="list-group-item">洛杉磯 湖人</li>
+                      <li class="list-group-item">鳳凰城 太陽</li>
+                      <li class="list-group-item">沙加緬度 國王</li>
+                    </ul>   
+                  </ul>           
+                </ul>
+              </ul>  
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class='container-fluid back'>
+      <div class='container inside'>
+        <div class='row'>
+          <div class='col-12 col-lg-6 offset-lg-2 mt-5 mb-5'>
+              <div id="carouselExampleCaptions" class="carousel slide size" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <a href='https://udn.com/news/story/7002/5785254'><img src="../new1.webp" class="d-block w-100"></a>
+                          <div class="carousel-caption d-none d-md-block">
+                              <h5>回應西蒙斯 </h5>
+                              <p>回應西蒙斯 安比德：球隊是圍繞他的需求建立</p>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <a href='https://udn.com/news/story/7002/5783763'><img src="../new2.webp" class="d-block w-100"></a>
+                          <div class="carousel-caption d-none d-md-block">
+                              <h5>衛少加入快艇？</h5>
+                              <p>交易前被問是否願意加入快艇 衛少回答「絕不！」</p>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <img src="../new2.jpg" class="d-block w-100">
+                          <div class="carousel-caption d-none d-md-block">
+                              <h5>威金斯施打疫苗</h5>
+                              <p>尊重個人意志 D.格林：不干涉威金斯施打疫苗決定</p>
+                          </div>
+                      </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+          </div>
+          <div class='d-none d-lg-block col-2 mt-5 mb-5'>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td><a href='https://sports.ltn.com.tw/news/breakingnews/3689665'>厄文「鐵齒」不打疫苗 蔡崇信喊話：別忘了我們的目標</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://sports.ltn.com.tw/news/breakingnews/3689518'>曝「士官長」因他而走 恩比德批西蒙斯不尊重球團</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://sports.ltn.com.tw/news/breakingnews/3658172'>防疫規定再升級 這3隊球員需接種疫苗才能在主場出賽</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href='https://sports.ltn.com.tw/news/breakingnews/3676734'>柯瑞有多神？ 老隊友伊古達拉：對籃壇帶來世代性影響</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+          </div>
+        </div>
+        <div class='container'>
+          <div class='row'>
+            <div class='d-none d-sm-block col-lg-8 mx-auto'>
+              <h4 style='color:blue'>焦點球星</h4>
+              <div class="card-group text-center justify-content-between">
+                <div style="height:320px">
+                  <div class="card border-light mb-3">
+                    <div class="card-body p-0">
+                      <div name="false" onclick="find(1,this);">
+                        <img src="../curry.jfif" class="card-img-top h-100">
+                        <div class="hide change" id='name1'>
+                          <div id='move'>
+                            Stephen curry
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="height:320px">
+                  <div class="card border-light mb-3">
+                    <div class="card-body p-0">
+                      <div name="false" onclick="find(2,this);">
+                        <img src="../klay.jfif" class="card-img-top h-100">
+                      </div>
+                    </div>
+                    <div class="hide change" id='name2'>
+                      <div id='move2'>
+                        Klay Thompson
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="height:320px">
+                  <div class="card border-light mb-3">
+                    <div class="card-body p-0">
+                      <div name="false" onclick="find(3,this);">
+                        <img src="../green.jfif" class="card-img-top h-100">
+                        <div class="hide change" id='name3'>
+                          <div id='move3'>
+                            Draymond green
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='d-block d-sm-none col-lg-8 mx-auto'>
+              <h4 style='color:blue'>焦點球星</h4>
+              <div class="card-group text-center justify-content-between">
+                <div class="card border-light mb-3">
+                  <div class="card-body p-0">
+                    <div name="false" onclick="find(4,this);">
+                      <img src="../curry.jfif" class="card-img-top h-100">
+                      <div class="hide change" id='name4'>
+                        <div id='move1-s'>
+                          Stephen curry
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card border-light mb-3">
+                  <div class="card-body p-0">
+                    <div name="false" onclick="find(5,this);">
+                      <img src="../klay.jfif" class="card-img-top h-100">
+                    </div>
+                  </div>
+                  <div class="hide change" id='name5'>
+                    <div id='move1-s'>
+                      Klay Thompson
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card border-light mb-3">
+                  <div class="card-body p-0">
+                    <div name="false" onclick="find(6,this);">
+                      <img src="../green.jfif" class="card-img-top h-100">
+                      <div class="hide change" id='name6'>
+                        <div id='move1-s'>
+                          Draymond green
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-12 col-lg-8 mx-auto'>
+                    <h4 style='color:blue'>2022球隊陣容</h4>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">姓名</th>
+                            <th scope="col">位置</th>
+                            <th scope="col">身高</th>
+                            <th scope="col">體重</th>
+                            <th scope="col">號碼</th>
+                            <th scope="col">國家</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Stephen Curry</th>
+                            <td>後衛</td>
+                            <td>1.90</td>
+                            <td>83.9 公斤</td>
+                            <td>30</td>
+                            <td>美國</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Klay Thompson</th>
+                            <td>後衛</td>
+                            <td>1.98</td>
+                            <td>97.5 公斤</td>
+                            <td>11</td>
+                            <td>美國</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Andrew Wiggins</th>
+                            <td>前鋒</td>
+                            <td>2.01</td>
+                            <td>89.4 公斤</td>
+                            <td>22</td>
+                            <td>加拿大</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Draymond Green</th>
+                            <td>前鋒</td>
+                            <td>1.98</td>
+                            <td>104.3 公斤</td>
+                            <td>23</td>
+                            <td>美國</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Kevon Looney</th>
+                            <td>中鋒</td>
+                            <td>2.06</td>
+                            <td>100.7 公斤</td>
+                            <td>5</td>
+                            <td>美國</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Jordan Poole</th>
+                            <td>後衛</td>
+                            <td>1.93</td>
+                            <td>88.0 公斤</td>
+                            <td>3</td>
+                            <td>美國</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Chris Chiozza</th>
+                            <td>後衛</td>
+                            <td>1.80</td>
+                            <td>79.4 公斤</td>
+                            <td>2</td>
+                            <td>美國</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Avery Bradley</th>
+                            <td>後衛</td>
+                            <td>1.90</td>
+                            <td>81.6 公斤</td>
+                            <td>10</td>
+                            <td>美國</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Langston Galloway</th>
+                            <td>後衛</td>
+                            <td>1.85</td>
+                            <td>90.7 公斤</td>
+                            <td>7</td>
+                            <td>美國</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Moses Moody</th>
+                            <td>後衛</td>
+                            <td>1.96</td>
+                            <td>95.3 公斤</td>
+                            <td>4</td>
+                            <td>美國</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Damion Lee</th>
+                            <td>後衛-前鋒</td>
+                            <td>1.96</td>
+                            <td>95.3 公斤</td>
+                            <td>1</td>
+                            <td>美國</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Mychal Mulder</th>
+                            <td>後衛</td>
+                            <td>1.90</td>
+                            <td>83.5 公斤</td>
+                            <td>15</td>
+                            <td>加拿大</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Andre Iguodala</th>
+                            <td>後衛-前鋒</td>
+                            <td>1.98</td>
+                            <td>97.5 公斤</td>
+                            <td>9</td>
+                            <td>美國</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Juan Toscano-Anderson</th>
+                            <td>前鋒</td>
+                            <td>1.98</td>
+                            <td>94.8 公斤</td>
+                            <td>95</td>
+                            <td>美國</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Otto Porter Jr.</th>
+                            <td>前鋒</td>
+                            <td>2.03</td>
+                            <td>89.8 公斤</td>
+                            <td>32</td>
+                            <td>美國</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Jonathan Kuminga</th>
+                            <td>前鋒</td>
+                            <td>2.01</td>
+                            <td>102.1 公斤</td>
+                            <td>00</td>
+                            <td>剛果民主共和國</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Nemanja Bjelica</th>
+                            <td>前鋒</td>
+                            <td>2.08</td>
+                            <td>106.1 公斤</td>
+                            <td>8</td>
+                            <td>塞爾維亞</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Jordan Bell</th>
+                            <td>前鋒</td>
+                            <td>2.03</td>
+                            <td>98.0 公斤</td>
+                            <td>6</td>
+                            <td>美國</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">James Wiseman</th>
+                            <td>中鋒</td>
+                            <td>2.13</td>
+                            <td>108.9 公斤</td>
+                            <td>33</td>
+                            <td>美國</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

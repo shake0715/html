@@ -7,6 +7,12 @@ const user = sequelize.define('user',{
         type:Sequelize.STRING,
         require:true
     },
+    resettoken:{
+        type:Sequelize.STRING
+    },
+    /*resettokenexpiration:{
+        type:Sequelize.DATE
+    },*/
     password:{
         type:Sequelize.STRING,
         require:true
